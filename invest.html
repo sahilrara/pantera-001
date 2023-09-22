@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pantera</title>
+    <!-- ====================== BOOTSTRAP CSS LINK  ========================== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- =========================  style.css   ======================= -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- =========================  favicon  ======================= -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/svg/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/new.css" />
+  </head>
+
+  <body>
+    <!-- back to top -->
+
+    <div onclick="topFunction()" id="back_to_top" class="topscroll">
+      <div
+        class="d-flex justify-content-center align-items-center cursor_pointer h-100 w-100"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 17.5901L7.41 19.0001L12 14.4201L16.59 19.0001L18 17.5901L12 11.5901L6 17.5901Z"
+            fill="white"
+          />
+          <path
+            d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- ============ Nav bar ============== -->
+    <div
+      class="common_heading_bg d-flex align-items-center justify-content-between flex-column position-relative"
+    >
+      <div
+        class="border_layer position-absolute bottom-0 start-0 end-0 py-5"
+      ></div>
+      <nav class="nav_bg pt-xl-1 position-relative z_index_custom w-100">
+        <div class="d-none d-lg-block">
+          <div class="container custom_container py-2 position-relative">
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="/">
+                <img
+                  class="w-100"
+                  src="./assets/images/svg/page-logo.svg"
+                  alt="page-logo"
+                />
+              </a>
+              <ul
+                class="d-flex align-items-center mb-0 d-none d-lg-flex ps-0 mb-0 gap-4"
+              >
+                <li class="list-unstyled">
+                  <a
+                    href="/"
+                    class="py-0 my-0 ff_segoe_ui fw-normal font_md opacity_07 nav_hover position-relative text-white transition_03 text-decoration-none"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li class="list-unstyled">
+                  <a
+                    href="invest.html"
+                    class="py-0 my-0 ff_segoe_ui fw-normal active font_md text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+                  >
+                    Investment
+                  </a>
+                </li>
+                <li class="list-unstyled">
+                  <a
+                    href="news.html"
+                    class="py-0 my-0 ff_segoe_ui fw-normal font_md text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+                  >
+                    News
+                  </a>
+                </li>
+              </ul>
+              <div
+                class="d-flex justify-content-center justify-content-md-start d-none d-lg-flex gap-2"
+              >
+                <a
+                  href="signin-form.html"
+                  class="common_btn fw-medium ff_gt_walsheim_pro text-decoration-none text-white font_md"
+                >
+                  Sign Up
+                </a>
+                <a
+                  href="login-form.html"
+                  class="login_btn text-decoration-none color_sea_green fw-medium ff_gt_walsheim_pro text-white font_md"
+                >
+                  Log In
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-block d-lg-none">
+          <div class="container">
+            <div
+              class="py-2 d-flex justify-content-between align-items-center position-relative"
+            >
+              <a href="/" class="ff_ubuntu fs_xxxlg text-whit5 ps-lg-5 ps-xl-1">
+                <img
+                  class="w-100"
+                  src="./assets/images/svg/page-logo.svg"
+                  alt="page-logo"
+                />
+              </a>
+              <div
+                onclick="handldeOverlayActive()"
+                id="nav-icon1"
+                class="hamburger-menu z_index_one"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-overlay">
+            <ul
+              class="h-100 list-unstyled d-flex flex-column justify-content-center gap-3 gap-md-4 align-items-center m-0"
+            >
+              <li>
+                <a
+                  onclick="handldeOverlayActive()"
+                  href="/"
+                  class="ff_segoe_ui d-inline-block nav_items fw-normal text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  onclick="handldeOverlayActive()"
+                  href="invest.html"
+                  class="ff_segoe_ui d-inline-block active nav_items fw-normal text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+                >
+                  Investment
+                </a>
+              </li>
+              <li>
+                <a
+                  onclick="handldeOverlayActive()"
+                  href="news.html"
+                  class="ff_segoe_ui d-inline-block nav_items fw-normal text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+                >
+                  News
+                </a>
+              </li>
+              <li>
+                <a
+                  onclick="handldeOverlayActive()"
+                  href="signin-form.html"
+                  class="d-inline-block common_btn fw-medium text-decoration-none ff_gt_walsheim_pro text-white nav_items"
+                >
+                  Sign Up
+                </a>
+              </li>
+              <li>
+                <a
+                  onclick="handldeOverlayActive()"
+                  href="login-form.html"
+                  class="login_btn text-decoration-none d-inline-block color_sea_green fw-medium ff_gt_walsheim_pro text-white nav_items"
+                >
+                  Log In
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex flex-grow-1 align-items-center">
+        <h2 class="text-center fw-bold ff_gt_walsheim_pro font_4xl">
+          Investment
+        </h2>
+      </div>
+    </div>
+    <!-- ============  Products slider 2 ============== -->
+    <div class="py-md-5 mt-md-2 mb-5 product_section position-relative">
+      <div class="position-absolute bottom-0 end-0 common_shade"></div>
+      <div class="custom_container container pb-5 pt-5 pt-lg-0 pt-md-3">
+        <h2
+          class="ff_gt_walsheim_pro fw-normal font_3xl text-white text-center mb-1"
+        >
+          Products
+        </h2>
+        <div class="position-relative">
+          <div
+            class="d-inline-block arrows_height_width2 rounded-5 cursor_pointer d-xl-flex justify-content-center align-items-center position-absolute left_silder2_arrow d-none d-xl-flex"
+          >
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="20"
+                cy="20"
+                r="19.5"
+                fill="none"
+                transform="matrix(-1 0 0 1 40 0)"
+              />
+              <path
+                d="M24.0608 29.546C24.342 29.2647 24.5 28.8832 24.5 28.4855C24.5 28.0877 24.342 27.7063 24.0608 27.425L16.6358 20L24.0608 12.575C24.3341 12.2921 24.4852 11.9132 24.4818 11.5199C24.4784 11.1266 24.3207 10.7504 24.0425 10.4723C23.7644 10.1941 23.3882 10.0364 22.9949 10.033C22.6016 10.0296 22.2227 10.1808 21.9398 10.454L13.4543 18.9395C13.1731 19.2208 13.0151 19.6022 13.0151 20C13.0151 20.3977 13.1731 20.7792 13.4543 21.0605L21.9398 29.546C22.2211 29.8272 22.6026 29.9852 23.0003 29.9852C23.3981 29.9852 23.7795 29.8272 24.0608 29.546Z"
+                fill="#62C9CC"
+                stroke="#62C9CC"
+              />
+            </svg>
+          </div>
+          <div
+            class="d-inline-block arrows_height_width2 rounded-5 cursor_pointer d-xl-flex justify-content-center align-items-center position-absolute right_silder2_arrow d-none"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.0713 11.9999L15.7177 11.6464L8.29609 4.22473C8.11566 4.03644 8.01588 3.78505 8.01815 3.52417C8.02043 3.26197 8.1256 3.01116 8.31101 2.82575C8.49641 2.64034 8.74722 2.53518 9.00942 2.5329C9.27031 2.53063 9.52171 2.63041 9.71 2.81086L18.1921 11.2929C18.1921 11.2929 18.1921 11.293 18.1921 11.293C18.3796 11.4805 18.4849 11.7348 18.4849 11.9999C18.4849 12.2651 18.3796 12.5194 18.1921 12.7069C18.1921 12.7069 18.1921 12.7069 18.1921 12.7069L9.70668 21.1923C9.51915 21.3798 9.26484 21.4851 8.99968 21.4851C8.73457 21.4851 8.4803 21.3798 8.29279 21.1924C8.29275 21.1924 8.29272 21.1924 8.29268 21.1923M16.0713 11.9999L7.93918 19.4249C7.65797 19.7062 7.5 20.0877 7.5 20.4854C7.5 20.8832 7.65797 21.2646 7.93918 21.5459L8.29268 21.1923M16.0713 11.9999L15.7177 12.3535L8.29279 19.7784M16.0713 11.9999L8.29279 19.7784M8.29268 21.1923C8.10528 21.0048 8 20.7505 8 20.4854C8 20.2203 8.1053 19.966 8.29273 19.7785C8.29275 19.7785 8.29277 19.7784 8.29279 19.7784M8.29268 21.1923L8.29279 19.7784"
+                fill="#62C9CC"
+                stroke="#62C9CC"
+              />
+            </svg>
+          </div>
+          <div class="mt-sm-4 position-relative z_index_5 products_slider">
+            <div class="product_card transition_03 h-100 mt-2">
+              <div
+                class="py-4 d-flex flex-column align-items-center bg_neavy_blue br_12"
+              >
+                <h2
+                  class="ff_gt_walsheim_pro text-white font_2xl fw-bold mt-lg-3"
+                >
+                  Kyoto
+                </h2>
+                <p
+                  class="ff_segoe_ui fw-normal font_lg opacity_06 text-white mt-1 mb-lg-2"
+                >
+                  Trade
+                </p>
+              </div>
+              <div class="p-3 p-md-4 p-sm-2 mt-md-2">
+                <div
+                  class="d-flex justify-content-between align-items-center pb-4"
+                >
+                  <div class="d-flex gap-2">
+                    <img
+                      width=" 48"
+                      height="48"
+                      src="./assets/images/svg/product-card-dollor-icon.svg"
+                      alt="dolloricon"
+                    />
+                    <img
+                      width="48"
+                      height="48"
+                      src="./assets/images/svg/product-card-icon2.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="fw-normal font_md text-white ff_gt_walsheim_pro mb-0 text-end"
+                    >
+                      15.00%
+                    </p>
+                    <a
+                      href="#"
+                      class="ff_segoe_ui fw-normal font_md color_sea_green text-decoration-none performance_btn py-1 px-2 d-inline-block"
+                    >
+                      Performance
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $10.00
+                  </p>
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $5,565,500
+                  </p>
+                </div>
+                <img
+                  class="w-100"
+                  src="./assets/images/svg/product-card-line.svg"
+                  alt="line image"
+                />
+                <div class="d-flex justify-content-between pt-2 py-5">
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    01/08/2023
+                  </p>
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    30/08/2023
+                  </p>
+                </div>
+                <a
+                  href="timeline.html"
+                  class="ff_gt_walsheim_pro fw-normal font_md color_sea_green w-100 bg-transparent product_card_btn text-decoration-none transition_03 d-inline-block text-center"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+            <div class="product_card transition_03 h-100 mt-2">
+              <div
+                class="py-4 d-flex flex-column align-items-center bg_neavy_blue br_12"
+              >
+                <h2
+                  class="ff_gt_walsheim_pro text-white font_2xl fw-bold mt-lg-3"
+                >
+                  Venalum
+                </h2>
+                <p
+                  class="ff_segoe_ui fw-normal font_lg opacity_06 text-white mt-1 mb-lg-2"
+                >
+                  Aluminum reducing company
+                </p>
+              </div>
+              <div class="p-3 p-md-4 p-sm-2 mt-md-2">
+                <div
+                  class="d-flex justify-content-between align-items-center pb-4"
+                >
+                  <div class="d-flex gap-2">
+                    <img
+                      width=" 48"
+                      height="48"
+                      src="./assets/images/svg/product-card-dollor-icon.svg"
+                      alt="dolloricon"
+                    />
+                    <img
+                      width="48"
+                      height="48"
+                      src="./assets/images/svg/product-card-icon2.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="fw-normal font_md text-white ff_gt_walsheim_pro mb-0 text-end"
+                    >
+                      15.00%
+                    </p>
+                    <a
+                      href="#"
+                      class="ff_segoe_ui fw-normal font_md color_sea_green text-decoration-none performance_btn py-1 px-2 d-inline-block"
+                    >
+                      Performance
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $10.00
+                  </p>
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $5,565,500
+                  </p>
+                </div>
+                <img
+                  class="w-100"
+                  src="./assets/images/svg/product-card-line.svg"
+                  alt="line image"
+                />
+                <div class="d-flex justify-content-between pt-2 py-5">
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    01/08/2023
+                  </p>
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    30/08/2023
+                  </p>
+                </div>
+                <a
+                  href="timeline.html"
+                  class="ff_gt_walsheim_pro fw-normal font_md color_sea_green w-100 bg-transparent product_card_btn text-decoration-none transition_03 d-inline-block text-center"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+            <div class="product_card transition_03 h-100 mt-2">
+              <div
+                class="py-4 d-flex flex-column align-items-center bg_neavy_blue br_12"
+              >
+                <h2
+                  class="ff_gt_walsheim_pro text-white font_2xl fw-bold mt-lg-3"
+                >
+                  Orinoco Ferrominera
+                </h2>
+                <p
+                  class="ff_segoe_ui fw-normal font_lg opacity_06 text-white mt-1 mb-lg-2"
+                >
+                  iron producer
+                </p>
+              </div>
+              <div class="p-3 p-md-4 p-sm-2 mt-md-2">
+                <div
+                  class="d-flex justify-content-between align-items-center pb-4"
+                >
+                  <div class="d-flex gap-2">
+                    <img
+                      width=" 48"
+                      height="48"
+                      src="./assets/images/svg/product-card-dollor-icon.svg"
+                      alt="dolloricon"
+                    />
+                    <img
+                      width="48"
+                      height="48"
+                      src="./assets/images/svg/product-card-icon2.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="fw-normal font_md text-white ff_gt_walsheim_pro mb-0 text-end"
+                    >
+                      15.00%
+                    </p>
+                    <a
+                      href="#"
+                      class="ff_segoe_ui fw-normal font_md color_sea_green text-decoration-none performance_btn py-1 px-2 d-inline-block"
+                    >
+                      Performance
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $10.00
+                  </p>
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $5,565,500
+                  </p>
+                </div>
+                <img
+                  class="w-100"
+                  src="./assets/images/svg/product-card-line.svg"
+                  alt="line image"
+                />
+                <div class="d-flex justify-content-between pt-2 py-5">
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    01/08/2023
+                  </p>
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    30/08/2023
+                  </p>
+                </div>
+                <a
+                  href="timeline.html"
+                  class="ff_gt_walsheim_pro fw-normal font_md color_sea_green w-100 bg-transparent product_card_btn text-decoration-none transition_03 d-inline-block text-center"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+            <div class="product_card transition_03 h-100 mt-2">
+              <div
+                class="py-4 d-flex flex-column align-items-center bg_neavy_blue br_12"
+              >
+                <h2
+                  class="ff_gt_walsheim_pro text-white font_2xl fw-bold mt-lg-3"
+                >
+                  Kyoto
+                </h2>
+                <p
+                  class="ff_segoe_ui fw-normal font_lg opacity_06 text-white mt-1 mb-lg-2"
+                >
+                  Trade
+                </p>
+              </div>
+              <div class="p-3 p-md-4 p-sm-2 mt-md-2">
+                <div
+                  class="d-flex justify-content-between align-items-center pb-4"
+                >
+                  <div class="d-flex gap-2">
+                    <img
+                      width=" 48"
+                      height="48"
+                      src="./assets/images/svg/product-card-dollor-icon.svg"
+                      alt="dolloricon"
+                    />
+                    <img
+                      width="48"
+                      height="48"
+                      src="./assets/images/svg/product-card-icon2.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="fw-normal font_md text-white ff_gt_walsheim_pro mb-0 text-end"
+                    >
+                      15.00%
+                    </p>
+                    <a
+                      href="#"
+                      class="ff_segoe_ui fw-normal font_md color_sea_green text-decoration-none performance_btn py-1 px-2 d-inline-block"
+                    >
+                      Performance
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $10.00
+                  </p>
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $5,565,500
+                  </p>
+                </div>
+                <img
+                  class="w-100"
+                  src="./assets/images/svg/product-card-line.svg"
+                  alt="line image"
+                />
+                <div class="d-flex justify-content-between pt-2 py-5">
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    01/08/2023
+                  </p>
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    30/08/2023
+                  </p>
+                </div>
+                <a
+                  href="timeline.html"
+                  class="ff_gt_walsheim_pro fw-normal font_md color_sea_green w-100 bg-transparent product_card_btn text-decoration-none transition_03 d-inline-block text-center"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+            <div class="product_card transition_03 h-100 mt-2">
+              <div
+                class="py-4 d-flex flex-column align-items-center bg_neavy_blue br_12"
+              >
+                <h2
+                  class="ff_gt_walsheim_pro text-white font_2xl fw-bold mt-lg-3"
+                >
+                  Venalum
+                </h2>
+                <p
+                  class="ff_segoe_ui fw-normal font_lg opacity_06 text-white mt-1 mb-lg-2"
+                >
+                  Aluminum reducing company
+                </p>
+              </div>
+              <div class="p-3 p-md-4 p-sm-2 mt-md-2">
+                <div
+                  class="d-flex justify-content-between align-items-center pb-4"
+                >
+                  <div class="d-flex gap-2">
+                    <img
+                      width=" 48"
+                      height="48"
+                      src="./assets/images/svg/product-card-dollor-icon.svg"
+                      alt="dolloricon"
+                    />
+                    <img
+                      width="48"
+                      height="48"
+                      src="./assets/images/svg/product-card-icon2.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="fw-normal font_md text-white ff_gt_walsheim_pro mb-0 text-end"
+                    >
+                      15.00%
+                    </p>
+                    <a
+                      href="#"
+                      class="ff_segoe_ui fw-normal font_md color_sea_green text-decoration-none performance_btn py-1 px-2 d-inline-block"
+                    >
+                      Performance
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $10.00
+                  </p>
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $5,565,500
+                  </p>
+                </div>
+                <img
+                  class="w-100"
+                  src="./assets/images/svg/product-card-line.svg"
+                  alt="line image"
+                />
+                <div class="d-flex justify-content-between pt-2 py-5">
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    01/08/2023
+                  </p>
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    30/08/2023
+                  </p>
+                </div>
+                <a
+                  href="timeline.html"
+                  class="ff_gt_walsheim_pro fw-normal font_md color_sea_green w-100 bg-transparent product_card_btn text-decoration-none transition_03 d-inline-block text-center"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+            <div class="product_card transition_03 h-100 mt-2">
+              <div
+                class="py-4 d-flex flex-column align-items-center bg_neavy_blue br_12"
+              >
+                <h2
+                  class="ff_gt_walsheim_pro text-white font_2xl fw-bold mt-lg-3"
+                >
+                  Orinoco Ferrominera
+                </h2>
+                <p
+                  class="ff_segoe_ui fw-normal font_lg opacity_06 text-white mt-1 mb-lg-2"
+                >
+                  iron producer
+                </p>
+              </div>
+              <div class="p-3 p-md-4 p-sm-2 mt-md-2">
+                <div
+                  class="d-flex justify-content-between align-items-center pb-4"
+                >
+                  <div class="d-flex gap-2">
+                    <img
+                      width=" 48"
+                      height="48"
+                      src="./assets/images/svg/product-card-dollor-icon.svg"
+                      alt="dolloricon"
+                    />
+                    <img
+                      width="48"
+                      height="48"
+                      src="./assets/images/svg/product-card-icon2.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="fw-normal font_md text-white ff_gt_walsheim_pro mb-0 text-end"
+                    >
+                      15.00%
+                    </p>
+                    <a
+                      href="#"
+                      class="ff_segoe_ui fw-normal font_md color_sea_green text-decoration-none performance_btn py-1 px-2 d-inline-block"
+                    >
+                      Performance
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between py-2">
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $10.00
+                  </p>
+                  <p
+                    class="ff_gt_walsheim_pro text-white fw-normal font_md mb-0"
+                  >
+                    $5,565,500
+                  </p>
+                </div>
+                <img
+                  class="w-100"
+                  src="./assets/images/svg/product-card-line.svg"
+                  alt="line image"
+                />
+                <div class="d-flex justify-content-between pt-2 py-5">
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    01/08/2023
+                  </p>
+                  <p
+                    class="ff_segoe_ui text-white opacity_05 fw-normal font_xs mb-0"
+                  >
+                    30/08/2023
+                  </p>
+                </div>
+                <a
+                  href="timeline.html"
+                  class="ff_gt_walsheim_pro fw-normal font_md color_sea_green w-100 bg-transparent product_card_btn text-decoration-none transition_03 d-inline-block text-center"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==============Trust-us================ -->
+    <div class="pb-md-5 pt-lg-0 mt-md-2 mb-5 product_section position-relative">
+      <div class="position-absolute bottom-0 start-0 common_shade"></div>
+      <div class="container custom_container pb-5 pt-lg-0 mb-xl-5" id="trust">
+        <h2
+          class="fw-normal ff_gt_walsheim_pro text-white mb-1 text-center font_3xl"
+        >
+          They
+          <span class="fw-bold color_sea_green ff_gt_walsheim_pro">
+            Trust Us
+          </span>
+        </h2>
+        <div class="mt-sm-5 position-relative z_index_5 trustz_us_slider">
+          <div class="trust_card_parent h-100 position-relative cursor_pointer">
+            <img
+              src="./assets/images/svg/slideroverlay.svg"
+              alt="overlay"
+              class="w-100 position-absolute overlayimg top-0"
+            />
+            <img
+              src="./assets/images/png/they_card_one.png"
+              alt="dolloricon"
+              class="w-100"
+            />
+            <div class="position-absolute bottom-0 start-50 translate-middle-x">
+              <h4
+                class="font_xl fw-medium text-center ff_gt_walsheim_pro mb-0 text-nowrap"
+              >
+                Kyoto
+              </h4>
+              <p
+                class="fw-normal font_lg opacity_07 ff_segoe_ui mb-2 text-center text-nowrap"
+              >
+                Trade
+              </p>
+            </div>
+          </div>
+          <div class="trust_card_parent h-100 position-relative cursor_pointer">
+            <img
+              src="./assets/images/svg/slideroverlay.svg"
+              alt="overlay"
+              class="w-100 position-absolute overlayimg top-0"
+            />
+            <img
+              src="./assets/images/png/they_card_three.png"
+              alt="dolloricon"
+              class="w-100"
+            />
+            <div class="position-absolute bottom-0 start-50 translate-middle-x">
+              <h4
+                class="font_xl fw-medium text-center ff_gt_walsheim_pro mb-0 text-nowrap"
+              >
+                Venalum
+              </h4>
+              <p
+                class="fw-normal font_lg opacity_07 ff_segoe_ui mb-2 text-center text-nowrap"
+              >
+                Aluminum reducing company
+              </p>
+            </div>
+          </div>
+          <div class="trust_card_parent h-100 position-relative cursor_pointer">
+            <img
+              src="./assets/images/svg/slideroverlay.svg"
+              alt="overlay"
+              class="w-100 position-absolute overlayimg top-0"
+            />
+            <img
+              src="./assets/images/png/they_card_two.png"
+              alt="dolloricon"
+              class="w-100"
+            />
+            <div class="position-absolute bottom-0 start-50 translate-middle-x">
+              <h4
+                class="font_xl fw-medium text-center ff_gt_walsheim_pro mb-0 text-nowrap"
+              >
+                Orinoco Ferrominera
+              </h4>
+              <p
+                class="fw-normal font_lg opacity_07 ff_segoe_ui mb-2 text-center text-nowrap"
+              >
+                iron producer
+              </p>
+            </div>
+          </div>
+          <div class="trust_card_parent h-100 position-relative cursor_pointer">
+            <img
+              src="./assets/images/svg/slideroverlay.svg"
+              alt="overlay"
+              class="w-100 position-absolute overlayimg top-0"
+            />
+            <img
+              src="./assets/images/png/they_card_three.png"
+              alt="dolloricon"
+              class="w-100"
+            />
+            <div class="position-absolute bottom-0 start-50 translate-middle-x">
+              <h4
+                class="font_xl fw-medium text-center ff_gt_walsheim_pro mb-0 text-nowrap"
+              >
+                Venalum
+              </h4>
+              <p
+                class="fw-normal font_lg opacity_07 ff_segoe_ui mb-2 text-center text-nowrap"
+              >
+                Aluminum reducing company
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============  Client slider 2 ============== -->
+    <div class="pb-5 mb-xl-2 position-relative pt-lg-5">
+      <div
+        class="position-absolute start-0 top-0 d-none Contactshadow d-none d-lg-inline-block"
+      >
+        <img
+          class="w-100"
+          src="./assets/images/png/contact_us_start_shadow.png"
+          alt="JaneCooperImg"
+        />
+      </div>
+      <div class="pb-5 mb-md-5 Clients_say_parent position-relative z_index_5">
+        <h2
+          class="fw-normal ff_gt_walsheim_pro text-white mb-1 text-center font_3xl"
+        >
+          Experiences of
+          <span class="fw-bold color_sea_green ff_gt_walsheim_pro">
+            Our Investors
+          </span>
+        </h2>
+        <div class="mt-sm-5 Client_slider">
+          <div class="client_card h-100">
+            <div class="p-4 p-lg-5">
+              <img
+                width="57"
+                height="47"
+                src="assets/images/svg/client-card-icon.svg"
+                alt="iconimg"
+              />
+              <p
+                class="mb-3 py-4 ff_segoe_ui fw-normal font_md text-white opacity_07"
+              >
+                Lorem ipsum dolor sit amet consectetur. Cursus erat eu in magna
+                in egestas. Enim consectetur amet vel sed tincidunt sed. Viverra
+                suspendisse molestie eget eu. Lectus integer viver scelerisque
+                morbi felis aliquam ut facilisi penatibus. Penatibus viverra
+                consequat volutpat pellentesque.
+              </p>
+              <div class="d-flex gap-3 align-items-center">
+                <img
+                  width="50"
+                  height="50"
+                  src="./assets/images/webp/kistin-watson-image.webp"
+                  alt="JaneCooperImg"
+                />
+                <div class="d-flex flex-column">
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    Kristin Watson
+                  </p>
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    CEO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="client_card h-100">
+            <div class="p-4 p-lg-5">
+              <img
+                width="57"
+                height="47"
+                src="assets/images/svg/client-card-icon.svg"
+                alt="iconimg"
+              />
+              <p
+                class="mb-3 py-4 ff_segoe_ui fw-normal font_md text-white opacity_07"
+              >
+                Lorem ipsum dolor sit amet consectetur. Cursus erat eu in magna
+                in egestas. Enim consectetur amet vel sed tincidunt sed. Viverra
+                suspendisse molestie eget eu. Lectus integer viver scelerisque
+                morbi felis aliquam ut facilisi penatibus. Penatibus viverra
+                consequat volutpat pellentesque.
+              </p>
+              <div class="d-flex gap-3 align-items-center">
+                <img
+                  width="50"
+                  height="50"
+                  src="./assets/images/webp/jane-cooper-image.webp"
+                  alt="JaneCooperImg"
+                />
+                <div class="d-flex flex-column">
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    Jane Cooper
+                  </p>
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    CEO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="client_card h-100">
+            <div class="p-4 p-lg-5">
+              <img
+                width="57"
+                height="47"
+                src="assets/images/svg/client-card-icon.svg"
+                alt="iconimg"
+              />
+              <p
+                class="mb-3 py-4 ff_segoe_ui fw-normal font_md text-white opacity_07"
+              >
+                Lorem ipsum dolor sit amet consectetur. Cursus erat eu in magna
+                in egestas. Enim consectetur amet vel sed tincidunt sed. Viverra
+                suspendisse molestie eget eu. Lectus integer viver scelerisque
+                morbi felis aliquam ut facilisi penatibus. Penatibus viverra
+                consequat volutpat pellentesque.
+              </p>
+              <div class="d-flex gap-3 align-items-center">
+                <img
+                  width="50"
+                  height="50"
+                  src="./assets/images/webp/kistin-watson-image.webp"
+                  alt="JaneCooperImg"
+                />
+
+                <div class="d-flex flex-column">
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    Kristin Watson
+                  </p>
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    CEO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="client_card h-100">
+            <div class="p-4 p-lg-5">
+              <img
+                width="57"
+                height="47"
+                src="assets/images/svg/client-card-icon.svg"
+                alt="iconimg"
+              />
+              <p
+                class="mb-3 py-4 ff_segoe_ui fw-normal font_md text-white opacity_07"
+              >
+                Lorem ipsum dolor sit amet consectetur. Cursus erat eu in magna
+                in egestas. Enim consectetur amet vel sed tincidunt sed. Viverra
+                suspendisse molestie eget eu. Lectus integer viver scelerisque
+                morbi felis aliquam ut facilisi penatibus. Penatibus viverra
+                consequat volutpat pellentesque.
+              </p>
+              <div class="d-flex gap-3 align-items-center">
+                <img
+                  width="50"
+                  height="50"
+                  src="./assets/images/webp/jane-cooper-image.webp"
+                  alt="JaneCooperImg"
+                />
+
+                <div class="d-flex flex-column">
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    Jane Cooper
+                  </p>
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    CEO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="client_card h-100">
+            <div class="p-4 p-lg-5">
+              <img
+                width="57"
+                height="47"
+                src="assets/images/svg/client-card-icon.svg"
+                alt="iconimg"
+              />
+              <p
+                class="mb-3 py-4 ff_segoe_ui fw-normal font_md text-white opacity_07"
+              >
+                Lorem ipsum dolor sit amet consectetur. Cursus erat eu in magna
+                in egestas. Enim consectetur amet vel sed tincidunt sed. Viverra
+                suspendisse molestie eget eu. Lectus integer viver scelerisque
+                morbi felis aliquam ut facilisi penatibus. Penatibus viverra
+                consequat volutpat pellentesque.
+              </p>
+              <div class="d-flex gap-3 align-items-center">
+                <img
+                  width="50"
+                  height="50"
+                  src="./assets/images/webp/kistin-watson-image.webp"
+                  alt="JaneCooperImg"
+                />
+
+                <div class="d-flex flex-column">
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    Kristin Watson
+                  </p>
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    CEO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="client_card h-100">
+            <div class="p-4 p-lg-5">
+              <img
+                width="57"
+                height="47"
+                src="assets/images/svg/client-card-icon.svg"
+                alt="iconimg"
+              />
+              <p
+                class="mb-3 py-4 ff_segoe_ui fw-normal font_md text-white opacity_07"
+              >
+                Lorem ipsum dolor sit amet consectetur. Cursus erat eu in magna
+                in egestas. Enim consectetur amet vel sed tincidunt sed. Viverra
+                suspendisse molestie eget eu. Lectus integer viver scelerisque
+                morbi felis aliquam ut facilisi penatibus. Penatibus viverra
+                consequat volutpat pellentesque.
+              </p>
+              <div class="d-flex gap-3 align-items-center">
+                <img
+                  width="50"
+                  height="50"
+                  src="./assets/images/webp/jane-cooper-image.webp"
+                  alt="JaneCooperImg"
+                />
+                <div class="d-flex flex-column">
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    Jane Cooper
+                  </p>
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    CEO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============== operates-securely =============== -->
+    <div class="container custom_container my-sm-5 py-5">
+      <div class="row py-lg-5 my-xl-2 flex-column-reverse flex-lg-row">
+        <div class="col-12 col-lg-6">
+          <div class="me-md-5 pe-4 pt-4 pt-lg-0">
+            <h2 class="heading ff_gt_walsheim_pro fw-normal mb-0">
+              Operates
+              <span class="color_sea_green fw-bold me-3 ms-1">
+                100% securely
+              </span>
+            </h2>
+            <p
+              class="para fw_medium mb-0 lh-150-percent mt-3 opacity_06 pe-xxl-4"
+            >
+              It is crucial to understand that achieving absolute security is
+              practically impossible in any system, including those employed by
+              banks or financial institutions.
+            </p>
+            <p
+              class="para fw_medium mb-0 lh-150-percent mt-2 mb-sm-5 mb-4 opacity_06 pe-xxl-4"
+            >
+              Security is an ongoing process of risk management and mitigation.
+              Banks and other organizations implement numerous security measures
+              and protocols to reduce the likelihood of security breaches and
+              protect sensitive information.
+            </p>
+            <div class="d-flex align-items-center">
+              <a
+                href="#"
+                class="common_btn d-inline-block text-decoration-none ff_gt_walsheim_pro fw_medium text-white font_md me-5"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-9 mx-auto col-lg-6">
+          <img
+            class="w-100 ps-lg-3"
+            src="./assets/images/svg/securely.svg"
+            alt="OperatesSecurely"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- ============  footer ============== -->
+    <div class="footer_bg position-relative z-1">
+      <div
+        style="rotate: 180deg; z-index: -1"
+        class="border_layer position-absolute top-0 start-0 end-0 py-5"
+      ></div>
+      <div class="container py-5 my-2 custom_container">
+        <div class="row mt-md-3 justify-content-between">
+          <div class="col-lg-4 col-md-6">
+            <div>
+              <a href="/"
+                ><img
+                  class="cursor_pointer"
+                  src="assets/images/svg/pagelogo.svg"
+                  alt="pagelogo"
+              /></a>
+              <p class="mt-4 opacity_07 fw-normal color_white ff_segoe_ui">
+                Lorem ipsum dolor sit amet consectetur. Cursus erat eu in magna
+                in egestas. Enim consectetur amet vel sed tincidunt sed.
+              </p>
+              <div class="d-flex mt-lg-4 pt-2">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="footer_icon transition_02 cursor_pointer"
+                >
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="transition_02"
+                      cx="22.0508"
+                      cy="22.9834"
+                      r="21.5"
+                      stroke="#62C9CC"
+                    />
+                    <path
+                      class="transition_02"
+                      d="M24.0508 24.4834H26.5508L27.5508 20.4834H24.0508V18.4834C24.0508 17.4534 24.0508 16.4834 26.0508 16.4834H27.5508V13.1234C27.2248 13.0804 25.9938 12.9834 24.6938 12.9834C21.9788 12.9834 20.0508 14.6404 20.0508 17.6834V20.4834H17.0508V24.4834H20.0508V32.9834H24.0508V24.4834Z"
+                      fill="#62C9CC"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  class="ms-3 footer_icon transition_02 cursor_pointer"
+                >
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="transition_02"
+                      cx="22.0508"
+                      cy="22.9834"
+                      r="21.5"
+                      stroke="#62C9CC"
+                    />
+                    <path
+                      class="transition_02"
+                      d="M23.0784 12.9846C23.8081 12.9818 24.5379 12.9892 25.2674 13.0066L25.4614 13.0136C25.6854 13.0216 25.9064 13.0316 26.1734 13.0436C27.2374 13.0936 27.9634 13.2616 28.6004 13.5086C29.2604 13.7626 29.8164 14.1066 30.3724 14.6626C30.8808 15.1622 31.2742 15.7666 31.5254 16.4336C31.7724 17.0706 31.9404 17.7976 31.9904 18.8616C32.0024 19.1276 32.0124 19.3496 32.0204 19.5736L32.0264 19.7676C32.0441 20.4968 32.0518 21.2262 32.0494 21.9556L32.0504 22.7016V24.0116C32.0528 24.7414 32.0452 25.4711 32.0274 26.2006L32.0214 26.3946C32.0134 26.6186 32.0034 26.8396 31.9914 27.1066C31.9414 28.1706 31.7714 28.8966 31.5254 29.5336C31.275 30.2014 30.8815 30.8062 30.3724 31.3056C29.8723 31.8139 29.2677 32.2074 28.6004 32.4586C27.9634 32.7056 27.2374 32.8736 26.1734 32.9236C25.9064 32.9356 25.6854 32.9456 25.4614 32.9536L25.2674 32.9596C24.5379 32.9774 23.8081 32.9851 23.0784 32.9826L22.3324 32.9836H21.0234C20.2936 32.9861 19.5639 32.9784 18.8344 32.9606L18.6404 32.9546C18.403 32.946 18.1657 32.936 17.9284 32.9246C16.8644 32.8746 16.1384 32.7046 15.5004 32.4586C14.8331 32.208 14.2286 31.8145 13.7294 31.3056C13.2204 30.8059 12.8266 30.2012 12.5754 29.5336C12.3284 28.8966 12.1604 28.1706 12.1104 27.1066C12.0992 26.8693 12.0892 26.632 12.0804 26.3946L12.0754 26.2006C12.0569 25.4711 12.0486 24.7414 12.0504 24.0116V21.9556C12.0476 21.2262 12.0549 20.4968 12.0724 19.7676L12.0794 19.5736C12.0874 19.3496 12.0974 19.1276 12.1094 18.8616C12.1594 17.7966 12.3274 17.0716 12.5744 16.4336C12.8258 15.7662 13.2203 15.1621 13.7304 14.6636C14.2293 14.1544 14.8333 13.7602 15.5004 13.5086C16.1384 13.2616 16.8634 13.0936 17.9284 13.0436L18.6404 13.0136L18.8344 13.0086C19.5636 12.9902 20.293 12.9819 21.0224 12.9836L23.0784 12.9846ZM22.0504 17.9846C21.3879 17.9753 20.7301 18.0977 20.1154 18.3447C19.5006 18.5917 18.941 18.9585 18.4692 19.4237C17.9974 19.8889 17.6228 20.4432 17.3671 21.0544C17.1114 21.6656 16.9797 22.3216 16.9797 22.9841C16.9797 23.6467 17.1114 24.3026 17.3671 24.9139C17.6228 25.5251 17.9974 26.0794 18.4692 26.5446C18.941 27.0098 19.5006 27.3765 20.1154 27.6236C20.7301 27.8706 21.3879 27.993 22.0504 27.9836C23.3765 27.9836 24.6482 27.4568 25.5859 26.5192C26.5236 25.5815 27.0504 24.3097 27.0504 22.9836C27.0504 21.6575 26.5236 20.3858 25.5859 19.4481C24.6482 18.5104 23.3765 17.9846 22.0504 17.9846ZM22.0504 19.9846C22.4489 19.9773 22.8449 20.0494 23.2152 20.1968C23.5855 20.3442 23.9227 20.564 24.2072 20.8432C24.4916 21.1224 24.7176 21.4555 24.8718 21.823C25.0261 22.1905 25.1056 22.585 25.1056 22.9836C25.1057 23.3822 25.0264 23.7768 24.8722 24.1443C24.7181 24.5119 24.4922 24.8451 24.2079 25.1244C23.9235 25.4037 23.5864 25.6235 23.2161 25.771C22.8458 25.9186 22.4499 25.9908 22.0514 25.9836C21.2557 25.9836 20.4927 25.6676 19.9301 25.1049C19.3675 24.5423 19.0514 23.7793 19.0514 22.9836C19.0514 22.188 19.3675 21.4249 19.9301 20.8623C20.4927 20.2997 21.2557 19.9836 22.0514 19.9836L22.0504 19.9846ZM27.3004 16.4846C26.9778 16.4975 26.6727 16.6348 26.449 16.8676C26.2253 17.1004 26.1004 17.4108 26.1004 17.7336C26.1004 18.0565 26.2253 18.3668 26.449 18.5997C26.6727 18.8325 26.9778 18.9697 27.3004 18.9826C27.6319 18.9826 27.9498 18.8509 28.1843 18.6165C28.4187 18.3821 28.5504 18.0641 28.5504 17.7326C28.5504 17.4011 28.4187 17.0832 28.1843 16.8487C27.9498 16.6143 27.6319 16.4826 27.3004 16.4826V16.4846Z"
+                      fill="#62C9CC"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  class="ms-3 footer_icon transition_02 cursor_pointer"
+                >
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="transition_02"
+                      cx="22.0508"
+                      cy="22.9834"
+                      r="21.5"
+                      stroke="#62C9CC"
+                    />
+                    <path
+                      class="transition_02"
+                      d="M32.5108 16.9834C31.7408 17.3334 30.9108 17.5634 30.0508 17.6734C30.9308 17.1434 31.6108 16.3034 31.9308 15.2934C31.1008 15.7934 30.1808 16.1434 29.2108 16.3434C28.4208 15.4834 27.3108 14.9834 26.0508 14.9834C23.7008 14.9834 21.7808 16.9034 21.7808 19.2734C21.7808 19.6134 21.8208 19.9434 21.8908 20.2534C18.3308 20.0734 15.1608 18.3634 13.0508 15.7734C12.6808 16.4034 12.4708 17.1434 12.4708 17.9234C12.4708 19.4134 13.2208 20.7334 14.3808 21.4834C13.6708 21.4834 13.0108 21.2834 12.4308 20.9834V21.0134C12.4308 23.0934 13.9108 24.8334 15.8708 25.2234C15.2415 25.3956 14.5809 25.4196 13.9408 25.2934C14.2124 26.1459 14.7444 26.8918 15.4618 27.4263C16.1793 27.9609 17.0463 28.2571 17.9408 28.2734C16.4245 29.4738 14.5448 30.1227 12.6108 30.1134C12.2708 30.1134 11.9308 30.0934 11.5908 30.0534C13.4908 31.2734 15.7508 31.9834 18.1708 31.9834C26.0508 31.9834 30.3808 25.4434 30.3808 19.7734C30.3808 19.5834 30.3808 19.4034 30.3708 19.2134C31.2108 18.6134 31.9308 17.8534 32.5108 16.9834Z"
+                      fill="#62C9CC"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  class="ms-3 footer_icon transition_02 cursor_pointer"
+                >
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="transition_02"
+                      cx="22.0508"
+                      cy="22.9834"
+                      r="21.5"
+                      stroke="#62C9CC"
+                    />
+                    <path
+                      class="transition_02"
+                      d="M16.9912 15.9834C16.9909 16.5139 16.78 17.0225 16.4047 17.3973C16.0295 17.7722 15.5206 17.9827 14.9902 17.9824C14.4598 17.9822 13.9512 17.7712 13.5763 17.3959C13.2014 17.0207 12.9909 16.5119 12.9912 15.9814C12.9915 15.451 13.2024 14.9424 13.5777 14.5675C13.953 14.1926 14.4618 13.9822 14.9922 13.9824C15.5226 13.9827 16.0312 14.1937 16.4061 14.5689C16.781 14.9442 16.9915 15.453 16.9912 15.9834ZM17.0512 19.4634H13.0512V31.9834H17.0512V19.4634ZM23.3712 19.4634H19.3912V31.9834H23.3312V25.4134C23.3312 21.7534 28.1012 21.4134 28.1012 25.4134V31.9834H32.0512V24.0534C32.0512 17.8834 24.9912 18.1134 23.3312 21.1434L23.3712 19.4634Z"
+                      fill="#62C9CC"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-3 col-md-5 col-sm-9">
+            <div class="d-flex justify-content-between mt-md-0 mt-4 pt-3">
+              <div class="pe-2">
+                <p class="mb-4 pb-1 ff_gt_walsheim_pro fw-bold color_white">
+                  Main
+                </p>
+                <a
+                  href="/"
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover transition_02"
+                >
+                  Home
+                </a>
+                <a
+                  href="/#about"
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover transition_02"
+                >
+                  About
+                </a>
+                <a
+                  href="/#features"
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover transition_02"
+                >
+                  Features
+                </a>
+                <a
+                  href="/#benefits"
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover transition_02"
+                >
+                  Benefits
+                </a>
+              </div>
+              <div class="ps-3">
+                <p class="mb-4 pb-1 ff_gt_walsheim_pro fw-bold color_white">
+                  Legal
+                </p>
+                <span
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover cursor_pointer transition_02"
+                >
+                  Terms & Condition
+                </span>
+                <span
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover cursor_pointer transition_02"
+                >
+                  Privacy policy
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border_top">
+        <p
+          class="opacity_07 py-3 mb-0 font_xs fw-normal ff_segoe_ui text-center px-3"
+        >
+          © Copyright
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Pantera | All rights reserved.
+        </p>
+      </div>
+    </div>
+    <!-- =========================  BOOTSTRAP JS LINK   ======================= -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./assets/js/App.js"></script>
+    <script>
+      const BackToTop = document.getElementById("back_to_top");
+      BackToTop.addEventListener("click", function moveToTop() {
+        document.documentElement.scrollTop = 0;
+      });
+      window.onscroll = () => scrollFunction();
+
+      function scrollFunction() {
+        if (document.documentElement.scrollTop > 150) {
+          BackToTop.style.display = "block";
+        } else {
+          BackToTop.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

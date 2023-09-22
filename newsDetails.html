@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ====================== BOOTSTRAP CSS LINK  ========================== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- =======================  CUSTOM CSS  ========================== -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- =========================  favicon  ======================= -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/svg/favicon.svg"
+      type="image/x-icon"
+    />
+    <title>Pantera</title>
+  </head>
+
+  <body>
+    <!-- =======================  Navbar start  ========================== -->
+    <nav class="nav_bg pt-xl-1 position-relative z_index_custom w-100">
+      <div class="d-none d-lg-block">
+        <div class="container custom_container py-2 position-relative">
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="/">
+              <img
+                class="w-100"
+                src="./assets/images/svg/page-logo.svg"
+                alt="page-logo"
+              />
+            </a>
+            <ul
+              class="d-flex align-items-center mb-0 d-none d-lg-flex ps-0 mb-0 gap-4"
+            >
+              <li class="list-unstyled">
+                <a
+                  href="/"
+                  class="py-0 my-0 ff_segoe_ui fw-normal font_md opacity_07 nav_hover position-relative text-white transition_03 text-decoration-none"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="list-unstyled">
+                <a
+                  href="invest.html"
+                  class="py-0 my-0 ff_segoe_ui fw-normal font_md text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+                >
+                  Investment
+                </a>
+              </li>
+              <li class="list-unstyled">
+                <a
+                  href="news.html"
+                  class="py-0 my-0 ff_segoe_ui fw-normal active font_md text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+                >
+                  News
+                </a>
+              </li>
+            </ul>
+            <div
+              class="d-flex justify-content-center justify-content-md-start d-none d-lg-flex gap-2"
+            >
+              <a
+                href="signin-form.html"
+                class="common_btn fw-medium ff_gt_walsheim_pro text-decoration-none text-white font_md"
+              >
+                Sign Up
+              </a>
+              <a
+                href="login-form.html"
+                class="login_btn text-decoration-none color_sea_green fw-medium ff_gt_walsheim_pro text-white font_md"
+              >
+                Log In
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-block d-lg-none">
+        <div class="container">
+          <div
+            class="py-2 d-flex justify-content-between align-items-center position-relative"
+          >
+            <a href="/" class="ff_ubuntu fs_xxxlg text-whit5 ps-lg-5 ps-xl-1">
+              <img
+                class="w-100"
+                src="./assets/images/svg/page-logo.svg"
+                alt="page-logo"
+              />
+            </a>
+            <div
+              onclick="handldeOverlayActive()"
+              id="nav-icon1"
+              class="hamburger-menu z_index_one"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-overlay">
+          <ul
+            class="h-100 list-unstyled d-flex flex-column justify-content-center gap-3 gap-md-4 align-items-center m-0"
+          >
+            <li>
+              <a
+                onclick="handldeOverlayActive()"
+                href="/"
+                class="ff_segoe_ui d-inline-block nav_items fw-normal text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                onclick="handldeOverlayActive()"
+                href="invest.html"
+                class="ff_segoe_ui d-inline-block nav_items fw-normal text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+              >
+                Investment
+              </a>
+            </li>
+            <li>
+              <a
+                onclick="handldeOverlayActive()"
+                href="news.html"
+                class="ff_segoe_ui d-inline-block active nav_items fw-normal text-white opacity_07 nav_hover position-relative transition_03 text-decoration-none"
+              >
+                News
+              </a>
+            </li>
+            <li>
+              <a
+                onclick="handldeOverlayActive()"
+                href="signin-form.html"
+                class="d-inline-block common_btn fw-medium text-decoration-none ff_gt_walsheim_pro text-white nav_items"
+              >
+                Sign Up
+              </a>
+            </li>
+
+            <li>
+              <a
+                onclick="handldeOverlayActive()"
+                href="login-form.html"
+                class="login_btn text-decoration-none d-inline-block color_sea_green fw-medium ff_gt_walsheim_pro text-white nav_items"
+              >
+                Log In
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- =======================  Market Analysis start  ========================== -->
+    <section class="position-relative z-1">
+      <!-- background glow effects -->
+      <span
+        class="position-absolute shadow_layer_market_top d-inline-block start-0 z-n1"
+      ></span>
+      <span
+        class="position-absolute shadow_layer_sed d-inline-block start-0 z-n1"
+      ></span>
+      <span
+        class="position-absolute shadow_layer_amet d-inline-block start-0 z-n1"
+      ></span>
+      <span
+        class="position-absolute shadow_layer_comment d-inline-block start-0 z-n1"
+      ></span>
+      <div class="container custom_container pt-sm-5 mt-5">
+        <h2 class="ff_gt_walsheim_pro fw-medium font_3xl text-white mb-0">
+          Market Analysis
+        </h2>
+        <div class="d-flex gap-sm-4 gap-2 mt-3 pt-1">
+          <div class="d-flex align-items-center">
+            <img
+              height="16"
+              width="16"
+              class="opacity-75"
+              src="./assets/images/svg/bi-person.svg"
+              alt="bi-person"
+            />
+            <p
+              class="ff_Montserrat font_xsm fw-normal mb-0 ms-1 name_fs text_clr_hero_name"
+            >
+              Brian Jackson
+            </p>
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              height="16"
+              width="16"
+              class="opacity-75"
+              src="./assets/images/svg/uil-calender.svg"
+              alt="uil-calender"
+            />
+            <p
+              class="ff_Montserrat font_xsm fw-normal mb-0 ms-1 name_fs text_clr_hero_name"
+            >
+              March 29, 2021
+            </p>
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              height="16"
+              width="16"
+              class="opacity-75"
+              src="./assets/images/svg/clock.svg"
+              alt="clock"
+            />
+            <p
+              class="ff_Montserrat font_xsm fw-normal mb-0 ms-1 name_fs text_clr_hero_name"
+            >
+              15 mins ago
+            </p>
+          </div>
+        </div>
+        <div class="row my-5 py-sm-4 pb-sm-5">
+          <div class="col-md-8">
+            <div>
+              <img
+                class="w-100"
+                src="assets/images/webp/market-men-img.webp"
+                alt="market_men_img"
+              />
+              <p
+                class="mb-0 ff_segoe_ui fw-normal font_md mt-4 text-white opacity_06"
+              >
+                Lorem ipsum dolor sit amet consectetur. Tincidunt sed sed sit
+                eget rhoncus quis placerat viverra. Volutpat massa scelerisque
+                adipiscing volutpat et lacus suspendisse. Aliquam erat
+                suspendisse ligula odio elit proin ipsum et ornare. Elit egestas
+                vel ut lobortis imperdiet ac amet.&nbsp;
+                <span class="color_sea_green fw-bold">
+                  Pharetra urna augue commodo fermentum
+                </span>
+                &nbsp;est eu sed pellentesque. Arcu venenatis proin commodo nunc
+                pretium. Auctor in arcu tristique tincidunt lectus pretium cras
+                integer. Vitae amet morbi et libero felis in. Integer sit lacus
+                arcu scelerisque. Varius interdum eu mattis auctor. At amet sed
+                ut viverra pulvinar aenean a. Arcu id proin eu ac gravida.
+                Placerat volutpat bibendum feugiat libero magna quam quisque
+                risus tortor.
+              </p>
+              <p
+                class="mb-0 ff_segoe_ui fw-normal font_md mt-2 pt-1 text-white opacity_06"
+              >
+                Lorem ipsum dolor sit amet consectetur. Tincidunt sed sed sit
+                eget rhoncus quis placerat viverra. Volutpat massa scelerisque
+                adipiscing volutpat et lacus suspendisse. Aliquam erat
+                suspendisse ligula odio elit proin ipsum et ornare.&nbsp;
+                <span class="color_sea_green fw-bold">
+                  Elit egestas vel ut lobortis imperdiet ac amet.
+                </span>
+                &nbsp;Pharetra urna augue commodo fermentum est eu sed
+                pellentesque. Arcu venenatis proin commodo nunc pretium.
+              </p>
+            </div>
+            <div class="mt-5 pt-sm-3">
+              <img
+                class="w-100"
+                src="assets/images/webp/sed-img.webp"
+                alt="sed_men_img"
+              />
+              <h3
+                class="ff_gt_walsheim_pro fw-bold text-white mb-0 mt-4 font_xl"
+              >
+                Sed faucibus morbi sapien neque pulvinar iaculis quam donec at
+                magnis vulputate eget.
+              </h3>
+              <p
+                class="ff_gt_walsheim_pro fw-normal font_md text-white mb-0 mt-sm-5 mt-3 pb-2"
+              >
+                Dolor sapien: Scelerisque orci suspendisse amet, at. Sed quam
+                justo euismod duis aliquet. Ullamcorper donec risus egestas
+                lorem mauris diam.
+              </p>
+              <div
+                class="market_read_more_box mt-4 py-4 sea_green_after_line position-relative"
+              >
+                <p
+                  class="ff_gt_walsheim_pro fw-medium font_md text-white mb-0 ps-sm-4 ps-3 ms-1"
+                >
+                  <span class="color_sea_green">Read More:</span> Raesent lectus
+                  viverra at pharetra urna. Purus ultrices lobortis pelle?
+                </p>
+              </div>
+              <p
+                class="ff_segoe_ui fw-normal font_md text-white opacity_06 mb-0 mt-sm-5 mt-4 pt-sm-4"
+              >
+                Eleifend suscipit vestibulum, fames a metus, quis nec. Mattis
+                habitant ultricies praesent lectus viverra at pharetra urna.
+                Purus ultrices lobortis pellentesque convallis id. Facilisis
+                dapibus pulvinar lectus urna massa mauris nulla lorem sodales.
+              </p>
+              <h3
+                class="ff_gt_walsheim_pro fw-bold text-white mb-0 mt-4 pt-3 font_xl"
+              >
+                Habitasse ornare posuere in eget vitae. Elementum, arcu enim, ac
+                pellentesque dolor venenatis
+              </h3>
+              <p
+                class="ff_segoe_ui fw-normal font_md text-white opacity_06 mb-0 mt-4 pt-1 pb-5"
+              >
+                Odio interdum nisl turpis etiam aliquet. Lacus porttitor quisque
+                volutpat quis. Orci turpis risus enim id et.&nbsp;
+                <span class="fw-bold color_sea_green">Magna felis,</span>
+                &nbsp;elementum dui adipiscing felis, quam. Lorem fusce blandit
+                nunc sed. Venenatis tincidunt a tincidunt sit euismod purus
+                consequat. Elementum nibh id vitae fames neque mi aliquam sed
+                feugiat. Sit cras erat mi, amet. Fames cras aliquet vitae
+                integer. Auctor etiam et odio vestibulum.😃
+                <br class="d-none d-lg-block" />
+                Scelerisque erat blandit at massa et. Dignissim praesent magna
+                tellus, molestie at commodo at montes, feugiat. Pharetra amet,
+                ultricies penatibus et vel, ornare. Dui nunc cursus risus ac.
+              </p>
+              <div
+                class="market_read_more_box mt-sm-4 py-4 sea_green_after_line position-relative"
+              >
+                <p
+                  class="ff_gt_walsheim_pro fw-medium font_md text-white mb-0 ps-sm-4 ps-3 ms-1"
+                >
+                  <span class="color_sea_green">Read More:</span> Sed aliquam
+                  pretium cras pulvinar. Auctor nulla habitasse vestibulum.
+                </p>
+              </div>
+            </div>
+            <div class="mt-5 pt-sm-3">
+              <img
+                class="w-100"
+                src="assets/images/webp/amet-img.webp"
+                alt="amet_men_img"
+              />
+              <h3
+                class="ff_gt_walsheim_pro fw-bold text-white mb-0 mt-4 font_xl"
+              >
+                Amet non massa arcu porttitor nisi integer cras tempor. Nec
+                volutpat eu in viverra m?
+              </h3>
+              <p
+                class="ff_Montserrat fw-normal font_md text-white opacity_06 mb-0 mt-sm-5 mt-3 pb-2"
+              >
+                Sit ipsum, vulputate eu curabitur purus mus eget. Felis lobortis
+                lectus scelerisque faucibus cursus. Ut fermentum convallis sed
+                risus orci, vitae, cursus blandit risus. In aenean porttitor
+                magna egestas eu eleifend orci enim.
+                <br class="d-none d-lg-block" />
+                Sapien sagittis sit adipiscing id malesuada. Leo risus amet
+                posuere ut elementum. Sapien gravida risus quis semper. Ornare
+                suspendisse congue.
+              </p>
+              <p
+                class="ff_Montserrat fw-normal font_md text-white opacity_06 mb-0 pt-2"
+              >
+                Sed amet accumsan sed nunc, nisl, cursus hac. Quis sapien nibh
+                donec placerat pharetra, sem at lobortis.
+              </p>
+              <h3
+                class="ff_gt_walsheim_pro fw-bold text-white mb-0 mt-4 pt-2 font_xl"
+              >
+                Purus metus, integer porta libero adipiscing. Pulvinar et libero
+                egestas magna aen?
+              </h3>
+              <p
+                class="ff_segoe_ui fw-normal font_md text-white opacity_06 mb-0 mt-sm-4 mt-3 pt-1"
+              >
+                <span class="color_sea_green fw-bold">
+                  Volutpat pretium volutpat interdu
+                </span>
+                &nbsp;egestas. Sit duis nibh aliquet lorem blandit. Amet, at
+                amet congue euismod tellus mi porttitor scelerisque diam. Quis
+                morbi lectus enim in tortor, senectus. Arcu, faucibus semper ac
+                id sed tellus vitae amet. Ridiculus mollis eget aliquet neque
+                pellentesque. Leo aliquet suscipit non interdum elit cras eu
+                feugiat.👌
+              </p>
+            </div>
+            <div class="mt-sm-5 pt-5">
+              <h2 class="ff_gt_walsheim_pro fw-bold font_xl mb-0 text-white">
+                Related Articles
+              </h2>
+              <div class="row mt-sm-4 pt-1">
+                <div class="col-sm-6 mt-3 mt-sm-0 position-relative">
+                  <span
+                    class="position-absolute shadow_layer_related d-inline-block z-1"
+                  ></span>
+                  <div
+                    class="technologies_box transition_02 p-3 z-3 position-relative"
+                  >
+                    <img
+                      class="w-100"
+                      src="assets/images/webp/article-one.webp"
+                      alt="article-one"
+                    />
+                    <p
+                      class="technologies_text d-inline-block ff_Montserrat fw-normal mt-2 mb-0 cursor_pointer"
+                    >
+                      Technologies
+                    </p>
+                    <h2
+                      class="ff_gt_walsheim_pro fw-bold font_md text-white mb-0 mt-2 pt-1"
+                    >
+                      Nec viverra eget nibh nulla massa a null a lorem non.
+                    </h2>
+                    <p
+                      class="ff_segoe_ui fw-normal font_xs text-white mb-0 mt-2"
+                    >
+                      By Jenny Wilson
+                    </p>
+                    <p
+                      class="ff_segoe_ui fw-normal font_md text-white mb-0 mt-2 pt-1"
+                    >
+                      Nec viverra eget nibh nulla massa a nulla lorem non. Puus
+                      at id amet viverra eget nibh nulla mad amet
+                      <span class="color_sea_green cursor_pointer">
+                        Read more....
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6 mt-3 mt-sm-0 position-relative">
+                  <span
+                    class="position-absolute shadow_layer_related d-inline-block z-1"
+                  ></span>
+                  <div
+                    class="technologies_box transition_02 p-3 z-3 position-relative"
+                  >
+                    <img
+                      class="w-100"
+                      src="assets/images/webp/artical-two.webp"
+                      alt="artical-two"
+                    />
+                    <p
+                      class="technologies_text d-inline-block ff_Montserrat fw-normal mt-2 mb-0 cursor_pointer"
+                    >
+                      Technologies
+                    </p>
+                    <h2
+                      class="ff_gt_walsheim_pro fw-bold font_md text-white mb-0 mt-2 pt-1"
+                    >
+                      Nec viverra eget nibh nulla massa a null a lorem non.
+                    </h2>
+                    <p
+                      class="ff_segoe_ui fw-normal font_xs text-white mb-0 mt-2"
+                    >
+                      By Jenny Wilson
+                    </p>
+                    <p
+                      class="ff_segoe_ui fw-normal font_md text-white mb-0 mt-2 pt-1"
+                    >
+                      Nec viverra eget nibh nulla massa a nulla lorem non. Puus
+                      at id amet viverra eget nibh nulla mad amet
+                      <span class="color_sea_green cursor_pointer">
+                        Read more....
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-5 mt-md-5">
+              <div
+                class="d-flex align-items-center justify-content-start justify-content-md-end"
+              >
+                <span class="ff_gt_walsheim_pro fw_medium font_md text-white">
+                  Share
+                </span>
+                <span class="ms-3 share_icons_custom">
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      class="footer_icon transition_02 cursor_pointer"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        class="transition_02"
+                        cx="22.0508"
+                        cy="22.9834"
+                        r="21.5"
+                        stroke="#62C9CC"
+                      />
+                      <path
+                        class="transition_02"
+                        d="M24.0508 24.4834H26.5508L27.5508 20.4834H24.0508V18.4834C24.0508 17.4534 24.0508 16.4834 26.0508 16.4834H27.5508V13.1234C27.2248 13.0804 25.9938 12.9834 24.6938 12.9834C21.9788 12.9834 20.0508 14.6404 20.0508 17.6834V20.4834H17.0508V24.4834H20.0508V32.9834H24.0508V24.4834Z"
+                        fill="#62C9CC"
+                      />
+                    </svg>
+                  </a>
+                </span>
+                <span class="ms-2 share_icons_custom">
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <svg
+                      class="footer_icon transition_02 cursor_pointer"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        class="transition_02"
+                        cx="22.0508"
+                        cy="22.9834"
+                        r="21.5"
+                        stroke="#62C9CC"
+                      />
+                      <path
+                        class="transition_02"
+                        d="M23.0784 12.9846C23.8081 12.9818 24.5379 12.9892 25.2674 13.0066L25.4614 13.0136C25.6854 13.0216 25.9064 13.0316 26.1734 13.0436C27.2374 13.0936 27.9634 13.2616 28.6004 13.5086C29.2604 13.7626 29.8164 14.1066 30.3724 14.6626C30.8808 15.1622 31.2742 15.7666 31.5254 16.4336C31.7724 17.0706 31.9404 17.7976 31.9904 18.8616C32.0024 19.1276 32.0124 19.3496 32.0204 19.5736L32.0264 19.7676C32.0441 20.4968 32.0518 21.2262 32.0494 21.9556L32.0504 22.7016V24.0116C32.0528 24.7414 32.0452 25.4711 32.0274 26.2006L32.0214 26.3946C32.0134 26.6186 32.0034 26.8396 31.9914 27.1066C31.9414 28.1706 31.7714 28.8966 31.5254 29.5336C31.275 30.2014 30.8815 30.8062 30.3724 31.3056C29.8723 31.8139 29.2677 32.2074 28.6004 32.4586C27.9634 32.7056 27.2374 32.8736 26.1734 32.9236C25.9064 32.9356 25.6854 32.9456 25.4614 32.9536L25.2674 32.9596C24.5379 32.9774 23.8081 32.9851 23.0784 32.9826L22.3324 32.9836H21.0234C20.2936 32.9861 19.5639 32.9784 18.8344 32.9606L18.6404 32.9546C18.403 32.946 18.1657 32.936 17.9284 32.9246C16.8644 32.8746 16.1384 32.7046 15.5004 32.4586C14.8331 32.208 14.2286 31.8145 13.7294 31.3056C13.2204 30.8059 12.8266 30.2012 12.5754 29.5336C12.3284 28.8966 12.1604 28.1706 12.1104 27.1066C12.0992 26.8693 12.0892 26.632 12.0804 26.3946L12.0754 26.2006C12.0569 25.4711 12.0486 24.7414 12.0504 24.0116V21.9556C12.0476 21.2262 12.0549 20.4968 12.0724 19.7676L12.0794 19.5736C12.0874 19.3496 12.0974 19.1276 12.1094 18.8616C12.1594 17.7966 12.3274 17.0716 12.5744 16.4336C12.8258 15.7662 13.2203 15.1621 13.7304 14.6636C14.2293 14.1544 14.8333 13.7602 15.5004 13.5086C16.1384 13.2616 16.8634 13.0936 17.9284 13.0436L18.6404 13.0136L18.8344 13.0086C19.5636 12.9902 20.293 12.9819 21.0224 12.9836L23.0784 12.9846ZM22.0504 17.9846C21.3879 17.9753 20.7301 18.0977 20.1154 18.3447C19.5006 18.5917 18.941 18.9585 18.4692 19.4237C17.9974 19.8889 17.6228 20.4432 17.3671 21.0544C17.1114 21.6656 16.9797 22.3216 16.9797 22.9841C16.9797 23.6467 17.1114 24.3026 17.3671 24.9139C17.6228 25.5251 17.9974 26.0794 18.4692 26.5446C18.941 27.0098 19.5006 27.3765 20.1154 27.6236C20.7301 27.8706 21.3879 27.993 22.0504 27.9836C23.3765 27.9836 24.6482 27.4568 25.5859 26.5192C26.5236 25.5815 27.0504 24.3097 27.0504 22.9836C27.0504 21.6575 26.5236 20.3858 25.5859 19.4481C24.6482 18.5104 23.3765 17.9846 22.0504 17.9846ZM22.0504 19.9846C22.4489 19.9773 22.8449 20.0494 23.2152 20.1968C23.5855 20.3442 23.9227 20.564 24.2072 20.8432C24.4916 21.1224 24.7176 21.4555 24.8718 21.823C25.0261 22.1905 25.1056 22.585 25.1056 22.9836C25.1057 23.3822 25.0264 23.7768 24.8722 24.1443C24.7181 24.5119 24.4922 24.8451 24.2079 25.1244C23.9235 25.4037 23.5864 25.6235 23.2161 25.771C22.8458 25.9186 22.4499 25.9908 22.0514 25.9836C21.2557 25.9836 20.4927 25.6676 19.9301 25.1049C19.3675 24.5423 19.0514 23.7793 19.0514 22.9836C19.0514 22.188 19.3675 21.4249 19.9301 20.8623C20.4927 20.2997 21.2557 19.9836 22.0514 19.9836L22.0504 19.9846ZM27.3004 16.4846C26.9778 16.4975 26.6727 16.6348 26.449 16.8676C26.2253 17.1004 26.1004 17.4108 26.1004 17.7336C26.1004 18.0565 26.2253 18.3668 26.449 18.5997C26.6727 18.8325 26.9778 18.9697 27.3004 18.9826C27.6319 18.9826 27.9498 18.8509 28.1843 18.6165C28.4187 18.3821 28.5504 18.0641 28.5504 17.7326C28.5504 17.4011 28.4187 17.0832 28.1843 16.8487C27.9498 16.6143 27.6319 16.4826 27.3004 16.4826V16.4846Z"
+                        fill="#62C9CC"
+                      />
+                    </svg>
+                  </a>
+                </span>
+                <span class="ms-2 share_icons_custom">
+                  <a href="https://www.twitter.com/" target="_blank">
+                    <svg
+                      width="45"
+                      height="45"
+                      class="footer_icon transition_02 cursor_pointer"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        class="transition_02"
+                        cx="22.0508"
+                        cy="22.9834"
+                        r="21.5"
+                        stroke="#62C9CC"
+                      />
+                      <path
+                        class="transition_02"
+                        d="M32.5108 16.9834C31.7408 17.3334 30.9108 17.5634 30.0508 17.6734C30.9308 17.1434 31.6108 16.3034 31.9308 15.2934C31.1008 15.7934 30.1808 16.1434 29.2108 16.3434C28.4208 15.4834 27.3108 14.9834 26.0508 14.9834C23.7008 14.9834 21.7808 16.9034 21.7808 19.2734C21.7808 19.6134 21.8208 19.9434 21.8908 20.2534C18.3308 20.0734 15.1608 18.3634 13.0508 15.7734C12.6808 16.4034 12.4708 17.1434 12.4708 17.9234C12.4708 19.4134 13.2208 20.7334 14.3808 21.4834C13.6708 21.4834 13.0108 21.2834 12.4308 20.9834V21.0134C12.4308 23.0934 13.9108 24.8334 15.8708 25.2234C15.2415 25.3956 14.5809 25.4196 13.9408 25.2934C14.2124 26.1459 14.7444 26.8918 15.4618 27.4263C16.1793 27.9609 17.0463 28.2571 17.9408 28.2734C16.4245 29.4738 14.5448 30.1227 12.6108 30.1134C12.2708 30.1134 11.9308 30.0934 11.5908 30.0534C13.4908 31.2734 15.7508 31.9834 18.1708 31.9834C26.0508 31.9834 30.3808 25.4434 30.3808 19.7734C30.3808 19.5834 30.3808 19.4034 30.3708 19.2134C31.2108 18.6134 31.9308 17.8534 32.5108 16.9834Z"
+                        fill="#62C9CC"
+                      />
+                    </svg>
+                  </a>
+                </span>
+                <span class="ms-2 share_icons_custom">
+                  <a href="https://in.linkedin.com/" target="_blank">
+                    <svg
+                      width="45"
+                      class="footer_icon transition_02 cursor_pointer"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        class="transition_02"
+                        cx="22.0508"
+                        cy="22.9834"
+                        r="21.5"
+                        stroke="#62C9CC"
+                      />
+                      <path
+                        class="transition_02"
+                        d="M16.9912 15.9834C16.9909 16.5139 16.78 17.0225 16.4047 17.3973C16.0295 17.7722 15.5206 17.9827 14.9902 17.9824C14.4598 17.9822 13.9512 17.7712 13.5763 17.3959C13.2014 17.0207 12.9909 16.5119 12.9912 15.9814C12.9915 15.451 13.2024 14.9424 13.5777 14.5675C13.953 14.1926 14.4618 13.9822 14.9922 13.9824C15.5226 13.9827 16.0312 14.1937 16.4061 14.5689C16.781 14.9442 16.9915 15.453 16.9912 15.9834ZM17.0512 19.4634H13.0512V31.9834H17.0512V19.4634ZM23.3712 19.4634H19.3912V31.9834H23.3312V25.4134C23.3312 21.7534 28.1012 21.4134 28.1012 25.4134V31.9834H32.0512V24.0534C32.0512 17.8834 24.9912 18.1134 23.3312 21.1434L23.3712 19.4634Z"
+                        fill="#62C9CC"
+                      />
+                    </svg>
+                  </a>
+                </span>
+              </div>
+              <div class="d-sm-flex gap-3 pt-4 mt-3 pt-md-5 mt-md-1">
+                <img
+                  class="esther_howard_img"
+                  src="assets/images/webp/Esther-Howard-image.webp"
+                  alt="image of esther haward"
+                />
+                <div class="mt-2 mt-sm-0">
+                  <p class="ff_segoe_ui fw-normal font_md text-white mb-0">
+                    Esther Howard
+                  </p>
+                  <p
+                    class="ff_segoe_ui fw-normal font_xs text-white opacity_07 mb-0"
+                  >
+                    Post Editor
+                  </p>
+                  <p
+                    class="ff_segoe_ui fw-normal font_xs text-white opacity_07 mb-0"
+                  >
+                    Lorem ipsum dolor sit amet consectetur. Dui sodales ante ac
+                    ut vel in. Ipsum aenean morbi urna accumsan vulputate.
+                    Commodo pulvinar semper mauris vel nunc iaculis arcu nec
+                    tempus. Aliquam consequat a suscipit donec felis nisl
+                    semper.
+                  </p>
+                </div>
+              </div>
+              <p
+                class="ff_segoe_ui fw-normal font_md text-white my-3 py-sm-4 py-3"
+              >
+                01 COMMENTS
+              </p>
+              <div class="d-sm-flex gap-3">
+                <img
+                  class="leslie_alexander_img mt-1"
+                  src="assets/images/webp/leslie-alexander-image.webp"
+                  alt="image of leslie alexander"
+                />
+                <div class="mt-2 mt-sm-0">
+                  <p class="mb-0 ff_segoe_ui fw-normal font_md text-white">
+                    Leslie Alexander
+                  </p>
+                  <p
+                    class="mb-0 ff_segoe_ui fw-normal font_xs text-white opacity_07"
+                  >
+                    3 hours ago
+                  </p>
+                  <p
+                    class="ff_segoe_ui fw-normal font_xs text-white opacity_07"
+                  >
+                    Lorem ipsum dolor sit amet consectetur. Dui sodales ante ac
+                    ut vel in. Ipsum aenean morbi urna accumsan vulputate.
+                    Commodo pulvinar semper mauris vel nunc iaculis arcu nec
+                    tempus.
+                  </p>
+                  <button
+                    class="ff_gt_walsheim_pro fw_medium font_md color_sea_green reply_btn_padding product_card_btn transition_03 bg-transparent"
+                  >
+                    Reply
+                  </button>
+                </div>
+              </div>
+              <div class="d-sm-flex gap-3 py-4 py-md-5 mt-3 mb-3 mb-md-1">
+                <img
+                  class="leslie_alexander_img mt-2"
+                  src="assets/images/webp/Robert-fox-image.webp"
+                  alt="image of robert fox"
+                />
+                <div class="mt-2 mt-sm-0">
+                  <p class="mb-0 ff_segoe_ui fw-normal font_md text-white">
+                    Robert Fox
+                  </p>
+                  <p
+                    class="mb-0 ff_segoe_ui fw-normal font_xs text-white opacity_07"
+                  >
+                    1 hours ago
+                  </p>
+                  <p
+                    class="ff_segoe_ui fw-normal font_xs text-white opacity_07"
+                  >
+                    Lorem ipsum dolor sit amet consectetur. Dui sodales ante ac
+                    ut vel in. Ipsum aenean morbi urna accumsan vulputate.
+                    Commodo pulvinar semper mauris vel nunc iaculis arcu nec
+                    tempus.
+                  </p>
+                  <button
+                    class="ff_gt_walsheim_pro fw_medium font_md color_sea_green reply_btn_padding product_card_btn transition_03 bg-transparent"
+                  >
+                    Reply
+                  </button>
+                </div>
+              </div>
+              <p
+                class="ff_gt_walsheim_pro fw-bold font_xl text-white pb-sm-4 pb-2 mb-3 pb-md-5 mb-md-1"
+              >
+                Write Your Comment
+              </p>
+              <form id="myForm">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <input
+                      id="firstname"
+                      required
+                      class="w-100 input_padding_small p-md-3 new_detail_input ff_segoe_ui fw-normal font_md text-white"
+                      placeholder="Your Name"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6 mt-4 mt-md-0">
+                    <input
+                      id="email"
+                      required
+                      type="email"
+                      class="w-100 input_padding_small p-md-3 new_detail_input ff_segoe_ui fw-normal font_md text-white"
+                      placeholder="Email Address"
+                    />
+                  </div>
+                </div>
+                <div class="row py-4 mb-sm-3">
+                  <div class="col-12">
+                    <textarea
+                      id="message"
+                      rows="7"
+                      required
+                      class="w-100 new_detail_input p-3 ff_segoe_ui fw-normal font_md text-white textarea_height"
+                      placeholder="Type Message"
+                    ></textarea>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="common_btn ff_gt_walsheim_pro fw_medium font_md text-white"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- latest posts and subscribe newsletter -->
+          <div class="col-md-4 position-relative">
+            <div class="position-sticky market_box_parent">
+              <div
+                class="market_common_boxes transition_03 position-relative z-1 p-3"
+              >
+                <span
+                  class="position-absolute shadow_layer_subscribe d-inline-block z-n1"
+                ></span>
+                <div
+                  class="position-relative d-flex align-items-center justify-content-center"
+                >
+                  <div class="position-absolute mt-4">
+                    <h5
+                      class="ff_segoe_ui fw-semibold font_lg text-white mb-0 text-center subscribe_text_fs"
+                    >
+                      Subscribe Our Newsletter
+                    </h5>
+                    <p
+                      class="ff_segoe_ui fw-normal font_md text-white text-center mt-2 px-4 font_size_lorem"
+                    >
+                      Eget id ut tristique laoreet nisl ac quisque adipiscing
+                      odio.
+                    </p>
+                  </div>
+                  <img
+                    class="w-100"
+                    src="assets/images/webp/subscribe-box-img.webp"
+                    alt="subscribe_layer_img"
+                  />
+                </div>
+                <span
+                  class="bg-white d-flex align-items-center mt-4 rounded-2 px-2"
+                >
+                  <span
+                    ><svg
+                      width="13"
+                      height="13"
+                      viewBox="0 0 13 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_156_5434)">
+                        <path
+                          d="M8.27734 6.34538L12.4779 9.02276V3.55493L8.27734 6.34538Z"
+                          fill="#62C9CC"
+                        />
+                        <path
+                          d="M0.0175781 3.55493V9.02276L4.21809 6.34538L0.0175781 3.55493Z"
+                          fill="#62C9CC"
+                        />
+                        <path
+                          d="M11.6987 1.96265H0.796392C0.407801 1.96265 0.099421 2.25472 0.0410156 2.63081L6.24756 6.75367L12.4541 2.63081C12.3957 2.25472 12.0873 1.96265 11.6987 1.96265Z"
+                          fill="#62C9CC"
+                        />
+                        <path
+                          d="M7.56402 6.81914L6.46211 7.55091C6.39669 7.59409 6.32271 7.61529 6.24796 7.61529C6.1732 7.61529 6.09922 7.59409 6.0338 7.55091L4.93189 6.81836L0.0429688 9.93621C0.102932 10.3092 0.409754 10.5989 0.796787 10.5989H11.6991C12.0862 10.5989 12.393 10.3092 12.4529 9.93621L7.56402 6.81914Z"
+                          fill="#62C9CC"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_156_5434">
+                          <rect
+                            width="12.4598"
+                            height="12.5625"
+                            fill="white"
+                            transform="translate(0.0175781)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <input
+                    class="w-100 rounded-2 py_11_custom bg-transparent outline_none border-0 p-2 market_email fs_10 color_sea_green ff_segoe_ui fw-normal"
+                    type="text"
+                    placeholder="Your email"
+                  />
+                </span>
+                <p
+                  class="ff_segoe_ui fw-normal fs_12 text-white opacity_06 mb-0 mt-1 ms-2"
+                >
+                  By entering your email you agree to our&nbsp;
+                  <span class="color_sea_green cursor_pointer"
+                    >Privacy Policy</span
+                  >.*
+                </p>
+                <button
+                  class="common_btn ff_gt_walsheim_pro fw_medium font_md text-white mt-3"
+                >
+                  Subscribe
+                </button>
+              </div>
+              <div class="mt-4 pt-3">
+                <h2
+                  class="ff_segoe_ui fw-normal font_lg text-white mb-0 text_border_bottom pb-2"
+                >
+                  The Latest Posts
+                </h2>
+                <div
+                  class="market_common_boxes transition_02 cursor_pointer position-relative z_index_5 p-3 mt-3"
+                >
+                  <img
+                    class="w-100"
+                    src="assets/images/webp/latest-egit-img.webp"
+                    alt="latest_egit_img"
+                  />
+                  <p class="mb-0 ff_segoe_ui fw-normal font_md text-white mt-3">
+                    Ut eget sed rhoncus orci, malesuada soll itudin urpis
+                    nascetur. Senectus.
+                  </p>
+                </div>
+                <div
+                  class="market_common_boxes transition_02 cursor_pointer p-3 mt-3"
+                >
+                  <img
+                    class="w-100"
+                    src="assets/images/webp/latest-volutpat-img.webp"
+                    alt="volutpat_egit_img"
+                  />
+                  <p class="mb-0 ff_segoe_ui fw-normal font_md text-white mt-3">
+                    Volutpat turpis in non risus. In phasellus eu placerat quam
+                    quis sed.
+                  </p>
+                </div>
+                <div
+                  class="market_common_boxes transition_02 cursor_pointer p-3 mt-3"
+                >
+                  <img
+                    class="w-100"
+                    src="assets/images/webp/latest-nullam-img.webp"
+                    alt="nullam_egit_img"
+                  />
+                  <p class="mb-0 ff_segoe_ui fw-normal font_md text-white mt-3">
+                    Nullam pretium, pulvinar sem ut nulla euismod. Eu
+                    scelerisque .
+                  </p>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <span
+                    class="text-end mt-2 pt-1 ff_segoe_ui fw-normal transition_02 color_sea_green mb-0 cursor_pointer fs_12"
+                  >
+                    View More
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============  footer ============== -->
+    <div class="footer_bg position-relative z-1">
+      <div
+        style="rotate: 180deg; z-index: -1"
+        class="border_layer position-absolute top-0 start-0 end-0 py-5"
+      ></div>
+      <div class="container py-5 my-2 custom_container">
+        <div class="row mt-md-3 justify-content-between">
+          <div class="col-lg-4 col-md-6">
+            <div>
+              <a href="/"
+                ><img
+                  class="cursor_pointer"
+                  src="assets/images/svg/pagelogo.svg"
+                  alt="pagelogo"
+              /></a>
+              <p class="mt-4 opacity_07 fw-normal color_white ff_segoe_ui">
+                Lorem ipsum dolor sit amet consectetur. Cursus erat eu in magna
+                in egestas. Enim consectetur amet vel sed tincidunt sed.
+              </p>
+              <div class="d-flex mt-lg-4 pt-2">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="footer_icon transition_02 cursor_pointer"
+                >
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="transition_02"
+                      cx="22.0508"
+                      cy="22.9834"
+                      r="21.5"
+                      stroke="#62C9CC"
+                    />
+                    <path
+                      class="transition_02"
+                      d="M24.0508 24.4834H26.5508L27.5508 20.4834H24.0508V18.4834C24.0508 17.4534 24.0508 16.4834 26.0508 16.4834H27.5508V13.1234C27.2248 13.0804 25.9938 12.9834 24.6938 12.9834C21.9788 12.9834 20.0508 14.6404 20.0508 17.6834V20.4834H17.0508V24.4834H20.0508V32.9834H24.0508V24.4834Z"
+                      fill="#62C9CC"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  class="ms-3 footer_icon transition_02 cursor_pointer"
+                >
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="transition_02"
+                      cx="22.0508"
+                      cy="22.9834"
+                      r="21.5"
+                      stroke="#62C9CC"
+                    />
+                    <path
+                      class="transition_02"
+                      d="M23.0784 12.9846C23.8081 12.9818 24.5379 12.9892 25.2674 13.0066L25.4614 13.0136C25.6854 13.0216 25.9064 13.0316 26.1734 13.0436C27.2374 13.0936 27.9634 13.2616 28.6004 13.5086C29.2604 13.7626 29.8164 14.1066 30.3724 14.6626C30.8808 15.1622 31.2742 15.7666 31.5254 16.4336C31.7724 17.0706 31.9404 17.7976 31.9904 18.8616C32.0024 19.1276 32.0124 19.3496 32.0204 19.5736L32.0264 19.7676C32.0441 20.4968 32.0518 21.2262 32.0494 21.9556L32.0504 22.7016V24.0116C32.0528 24.7414 32.0452 25.4711 32.0274 26.2006L32.0214 26.3946C32.0134 26.6186 32.0034 26.8396 31.9914 27.1066C31.9414 28.1706 31.7714 28.8966 31.5254 29.5336C31.275 30.2014 30.8815 30.8062 30.3724 31.3056C29.8723 31.8139 29.2677 32.2074 28.6004 32.4586C27.9634 32.7056 27.2374 32.8736 26.1734 32.9236C25.9064 32.9356 25.6854 32.9456 25.4614 32.9536L25.2674 32.9596C24.5379 32.9774 23.8081 32.9851 23.0784 32.9826L22.3324 32.9836H21.0234C20.2936 32.9861 19.5639 32.9784 18.8344 32.9606L18.6404 32.9546C18.403 32.946 18.1657 32.936 17.9284 32.9246C16.8644 32.8746 16.1384 32.7046 15.5004 32.4586C14.8331 32.208 14.2286 31.8145 13.7294 31.3056C13.2204 30.8059 12.8266 30.2012 12.5754 29.5336C12.3284 28.8966 12.1604 28.1706 12.1104 27.1066C12.0992 26.8693 12.0892 26.632 12.0804 26.3946L12.0754 26.2006C12.0569 25.4711 12.0486 24.7414 12.0504 24.0116V21.9556C12.0476 21.2262 12.0549 20.4968 12.0724 19.7676L12.0794 19.5736C12.0874 19.3496 12.0974 19.1276 12.1094 18.8616C12.1594 17.7966 12.3274 17.0716 12.5744 16.4336C12.8258 15.7662 13.2203 15.1621 13.7304 14.6636C14.2293 14.1544 14.8333 13.7602 15.5004 13.5086C16.1384 13.2616 16.8634 13.0936 17.9284 13.0436L18.6404 13.0136L18.8344 13.0086C19.5636 12.9902 20.293 12.9819 21.0224 12.9836L23.0784 12.9846ZM22.0504 17.9846C21.3879 17.9753 20.7301 18.0977 20.1154 18.3447C19.5006 18.5917 18.941 18.9585 18.4692 19.4237C17.9974 19.8889 17.6228 20.4432 17.3671 21.0544C17.1114 21.6656 16.9797 22.3216 16.9797 22.9841C16.9797 23.6467 17.1114 24.3026 17.3671 24.9139C17.6228 25.5251 17.9974 26.0794 18.4692 26.5446C18.941 27.0098 19.5006 27.3765 20.1154 27.6236C20.7301 27.8706 21.3879 27.993 22.0504 27.9836C23.3765 27.9836 24.6482 27.4568 25.5859 26.5192C26.5236 25.5815 27.0504 24.3097 27.0504 22.9836C27.0504 21.6575 26.5236 20.3858 25.5859 19.4481C24.6482 18.5104 23.3765 17.9846 22.0504 17.9846ZM22.0504 19.9846C22.4489 19.9773 22.8449 20.0494 23.2152 20.1968C23.5855 20.3442 23.9227 20.564 24.2072 20.8432C24.4916 21.1224 24.7176 21.4555 24.8718 21.823C25.0261 22.1905 25.1056 22.585 25.1056 22.9836C25.1057 23.3822 25.0264 23.7768 24.8722 24.1443C24.7181 24.5119 24.4922 24.8451 24.2079 25.1244C23.9235 25.4037 23.5864 25.6235 23.2161 25.771C22.8458 25.9186 22.4499 25.9908 22.0514 25.9836C21.2557 25.9836 20.4927 25.6676 19.9301 25.1049C19.3675 24.5423 19.0514 23.7793 19.0514 22.9836C19.0514 22.188 19.3675 21.4249 19.9301 20.8623C20.4927 20.2997 21.2557 19.9836 22.0514 19.9836L22.0504 19.9846ZM27.3004 16.4846C26.9778 16.4975 26.6727 16.6348 26.449 16.8676C26.2253 17.1004 26.1004 17.4108 26.1004 17.7336C26.1004 18.0565 26.2253 18.3668 26.449 18.5997C26.6727 18.8325 26.9778 18.9697 27.3004 18.9826C27.6319 18.9826 27.9498 18.8509 28.1843 18.6165C28.4187 18.3821 28.5504 18.0641 28.5504 17.7326C28.5504 17.4011 28.4187 17.0832 28.1843 16.8487C27.9498 16.6143 27.6319 16.4826 27.3004 16.4826V16.4846Z"
+                      fill="#62C9CC"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  class="ms-3 footer_icon transition_02 cursor_pointer"
+                >
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="transition_02"
+                      cx="22.0508"
+                      cy="22.9834"
+                      r="21.5"
+                      stroke="#62C9CC"
+                    />
+                    <path
+                      class="transition_02"
+                      d="M32.5108 16.9834C31.7408 17.3334 30.9108 17.5634 30.0508 17.6734C30.9308 17.1434 31.6108 16.3034 31.9308 15.2934C31.1008 15.7934 30.1808 16.1434 29.2108 16.3434C28.4208 15.4834 27.3108 14.9834 26.0508 14.9834C23.7008 14.9834 21.7808 16.9034 21.7808 19.2734C21.7808 19.6134 21.8208 19.9434 21.8908 20.2534C18.3308 20.0734 15.1608 18.3634 13.0508 15.7734C12.6808 16.4034 12.4708 17.1434 12.4708 17.9234C12.4708 19.4134 13.2208 20.7334 14.3808 21.4834C13.6708 21.4834 13.0108 21.2834 12.4308 20.9834V21.0134C12.4308 23.0934 13.9108 24.8334 15.8708 25.2234C15.2415 25.3956 14.5809 25.4196 13.9408 25.2934C14.2124 26.1459 14.7444 26.8918 15.4618 27.4263C16.1793 27.9609 17.0463 28.2571 17.9408 28.2734C16.4245 29.4738 14.5448 30.1227 12.6108 30.1134C12.2708 30.1134 11.9308 30.0934 11.5908 30.0534C13.4908 31.2734 15.7508 31.9834 18.1708 31.9834C26.0508 31.9834 30.3808 25.4434 30.3808 19.7734C30.3808 19.5834 30.3808 19.4034 30.3708 19.2134C31.2108 18.6134 31.9308 17.8534 32.5108 16.9834Z"
+                      fill="#62C9CC"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  class="ms-3 footer_icon transition_02 cursor_pointer"
+                >
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="transition_02"
+                      cx="22.0508"
+                      cy="22.9834"
+                      r="21.5"
+                      stroke="#62C9CC"
+                    />
+                    <path
+                      class="transition_02"
+                      d="M16.9912 15.9834C16.9909 16.5139 16.78 17.0225 16.4047 17.3973C16.0295 17.7722 15.5206 17.9827 14.9902 17.9824C14.4598 17.9822 13.9512 17.7712 13.5763 17.3959C13.2014 17.0207 12.9909 16.5119 12.9912 15.9814C12.9915 15.451 13.2024 14.9424 13.5777 14.5675C13.953 14.1926 14.4618 13.9822 14.9922 13.9824C15.5226 13.9827 16.0312 14.1937 16.4061 14.5689C16.781 14.9442 16.9915 15.453 16.9912 15.9834ZM17.0512 19.4634H13.0512V31.9834H17.0512V19.4634ZM23.3712 19.4634H19.3912V31.9834H23.3312V25.4134C23.3312 21.7534 28.1012 21.4134 28.1012 25.4134V31.9834H32.0512V24.0534C32.0512 17.8834 24.9912 18.1134 23.3312 21.1434L23.3712 19.4634Z"
+                      fill="#62C9CC"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-3 col-md-5 col-sm-9">
+            <div class="d-flex justify-content-between mt-md-0 mt-4 pt-3">
+              <div class="pe-2">
+                <p class="mb-4 pb-1 ff_gt_walsheim_pro fw-bold color_white">
+                  Main
+                </p>
+                <a
+                  href="/"
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover transition_02"
+                >
+                  Home
+                </a>
+                <a
+                  href="/#about"
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover transition_02"
+                >
+                  About
+                </a>
+                <a
+                  href="/#features"
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover transition_02"
+                >
+                  Features
+                </a>
+                <a
+                  href="/#benefits"
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover transition_02"
+                >
+                  Benefits
+                </a>
+              </div>
+              <div class="ps-3">
+                <p class="mb-4 pb-1 ff_gt_walsheim_pro fw-bold color_white">
+                  Legal
+                </p>
+                <span
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover cursor_pointer transition_02"
+                >
+                  Terms & Condition
+                </span>
+                <span
+                  class="text-decoration-none d-block mb-3 ff_segoe_ui fw-normal opacity_80 font_md color_white footer_link_hover cursor_pointer transition_02"
+                >
+                  Privacy policy
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border_top">
+        <p
+          class="opacity_07 py-3 mb-0 font_xs fw-normal ff_segoe_ui text-center px-3"
+        >
+          © Copyright
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Pantera | All rights reserved.
+        </p>
+      </div>
+    </div>
+    <!-- back to top -->
+
+    <div onclick="topFunction()" id="back_to_top" class="topscroll">
+      <div
+        class="d-flex justify-content-center align-items-center cursor_pointer h-100 w-100"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 17.5901L7.41 19.0001L12 14.4201L16.59 19.0001L18 17.5901L12 11.5901L6 17.5901Z"
+            fill="white"
+          />
+          <path
+            d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- =========================  BOOTSTRAP JS LINK   ======================= -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/js/App.js"></script>
+    <script>
+      const form = document.getElementById("myForm");
+      const firstnameInput = document.getElementById("firstname");
+      const lastnameInput = document.getElementById("lastname");
+      const emailInput = document.getElementById("email");
+      const phoneInput = document.getElementById("phone");
+      const messageInput = document.getElementById("message");
+
+      const firstnameError = document.getElementById("firstnameError");
+      const lastnameError = document.getElementById("lastnameError");
+      const emailError = document.getElementById("emailError");
+      const phoneError = document.getElementById("phoneError");
+      const messageError = document.getElementById("messageError");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Add more custom validation for First Name, Last Name, and Message fields if needed
+        // ...
+        // If all validations pass, log the form data to the console and clear the form
+        console.log("First Name:", firstnameInput.value);
+        console.log("Email:", emailInput.value);
+        console.log("Message:", messageInput.value);
+        form.reset(); // Reset the form to clear the inputs
+
+        // Show SweetAlert success message
+        Swal.fire({
+          icon: "success",
+          title: "Form Submitted",
+          text: "Thank you for submitting the form!",
+        });
+      });
+
+      // back-to-top
+      const BackToTop = document.getElementById("back_to_top");
+      BackToTop.addEventListener("click", function moveToTop() {
+        document.documentElement.scrollTop = 0;
+      });
+      window.onscroll = () => scrollFunction();
+
+      function scrollFunction() {
+        if (document.documentElement.scrollTop > 150) {
+          BackToTop.style.display = "block";
+        } else {
+          BackToTop.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

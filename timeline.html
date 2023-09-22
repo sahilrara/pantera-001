@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantera</title>
+    <link rel="shortcut icon" href="./assets/images/svg/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/timeline.css">
+    <link rel="stylesheet" href="./assets/css/graphic.css">
+</head>
+
+<body>
+    <div style="overflow-x: hidden !important;" class="bg_main">
+        <nav style="position: sticky;"
+            class="bg_main navbar navbar-expand-md top_bar_top_pos p_topbar fixed-top top_bar_border justify-content-between flex-column flex-lg-row">
+            <div class="row justify-content-between w_topbar_row_per align-items-center pt-3 pt-md-0">
+                <div class="col-md-7 col-lg-6 col-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-12 max_w_242px"><a href="index.html"><img
+                                    src="/assets/images/svg/page-logo.svg" alt="logo" class="logo_max_w w_logo"></a>
+                        </div>
+                        <div class="col-6 ps-0 d-none d-md-inline-block">
+                            <div style="padding-right: 12px; max-width: 401px;"
+                                class="d-flex bg_input_rgb  justify-content-between align-items-center br_44px">
+                                <input type="text" id="search"
+                                    class=" bg-transparent  topbar_input  border-0 w-100 text-white ff_segoe_ui fw-normal lh_150per font_xs"
+                                    placeholder="Search for Assets">
+
+                                <label for="search"><span class="cursor_pointer"><svg width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.146 15.3707 4.888 14.112C3.63 12.8533 3.00067 11.316 3 9.5C3 7.68333 3.62933 6.146 4.888 4.888C6.14667 3.63 7.684 3.00067 9.5 3C11.3167 3 12.854 3.62933 14.112 4.888C15.37 6.14667 15.9993 7.684 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8127 13.5623 12.688 12.687C13.5633 11.8117 14.0007 10.7493 14 9.5C14 8.25 13.5623 7.18733 12.687 6.312C11.8117 5.43667 10.7493 4.99933 9.5 5C8.25 5 7.18733 5.43767 6.312 6.313C5.43667 7.18833 4.99933 8.25067 5 9.5C5 10.75 5.43767 11.8127 6.313 12.688C7.18833 13.5633 8.25067 14.0007 9.5 14Z"
+                                                fill="#62C9CC" />
+                                        </svg>
+                                    </span>
+                                </label>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-md-5 col-lg-6 px-0 px_md_12px">
+                    <div class="d-flex align-items-center justify-content-end pe_12px">
+                        <div class="text-end">
+                            <a href="notifications.html">
+                                <span class="cursor_pointer notification_img">
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.5098 1C12.2231 0.999962 11.9398 1.06155 11.679 1.18059C11.4182 1.29963 11.1861 1.47333 10.9983 1.68994C10.8105 1.90654 10.6715 2.16098 10.5907 2.43601C10.5098 2.71104 10.4891 3.00024 10.5298 3.284C9.08039 3.71193 7.80833 4.59722 6.90356 5.80767C5.99878 7.01812 5.50985 8.48877 5.50977 10V18H4.50977C4.24455 18 3.9902 18.1054 3.80266 18.2929C3.61512 18.4804 3.50977 18.7348 3.50977 19C3.50977 19.2652 3.61512 19.5196 3.80266 19.7071C3.9902 19.8946 4.24455 20 4.50977 20H20.5098C20.775 20 21.0293 19.8946 21.2169 19.7071C21.4044 19.5196 21.5098 19.2652 21.5098 19C21.5098 18.7348 21.4044 18.4804 21.2169 18.2929C21.0293 18.1054 20.775 18 20.5098 18H19.5098V10C19.5097 8.48877 19.0207 7.01812 18.116 5.80767C17.2112 4.59722 15.9391 3.71193 14.4898 3.284C14.5305 3.00024 14.5097 2.71104 14.4289 2.43601C14.348 2.16098 14.209 1.90654 14.0212 1.68994C13.8335 1.47333 13.6013 1.29963 13.3405 1.18059C13.0798 1.06155 12.7964 0.999962 12.5098 1ZM14.5098 22C14.5098 22.2652 14.4044 22.5196 14.2169 22.7071C14.0293 22.8946 13.775 23 13.5098 23H11.5098C11.2445 23 10.9902 22.8946 10.8027 22.7071C10.6151 22.5196 10.5098 22.2652 10.5098 22C10.5098 21.7348 10.6151 21.4804 10.8027 21.2929C10.9902 21.1054 11.2445 21 11.5098 21H13.5098C13.775 21 14.0293 21.1054 14.2169 21.2929C14.4044 21.4804 14.5098 21.7348 14.5098 22Z"
+                                            fill="white" />
+                                        <circle cx="18.7207" cy="5.20795" r="3.28906" fill="#62C9CC" stroke="#12123A" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="ps-sm-3 ps-2 ">
+                            <a href="profile.html" style="color: transparent;">
+                                <div
+                                    class="d-flex max_w_profile_btn align-items-center modify_profile_button br_33px ms-auto cursor_pointer border_rgb transition_03">
+                                    <img src="./assets/images/webp/profilepic.webp" class="w-100 profile_pic_width"
+                                        alt="profilepic">
+                                    <p class="mb-0 text-white ff_gt_walsheim_pro font_md fw-normal ps-2 pe-sm-4 pe-1">
+                                        Jhon
+                                        Doe</p>
+                                    <span class=" d-inline-block pb-1"><svg width="13" height="8" viewBox="0 0 13 8"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.91843 5.99086L7.27198 5.63731L11.7608 1.14852C11.8374 1.07581 11.9392 1.03563 12.0449 1.03655C12.1518 1.03748 12.254 1.08034 12.3296 1.15591C12.4051 1.23147 12.448 1.33369 12.4489 1.44056C12.4499 1.54625 12.4097 1.64812 12.337 1.72471L7.20658 6.8551C7.20656 6.85511 7.20655 6.85513 7.20653 6.85515C7.1301 6.93152 7.02648 6.97443 6.91843 6.97443C6.81039 6.97443 6.70676 6.93152 6.63034 6.85515L6.63028 6.8551M6.91843 5.99086L6.63028 6.8551M6.91843 5.99086L6.56488 5.63731M6.91843 5.99086L6.56488 5.63731M6.63028 6.8551L1.49628 1.7211C1.49627 1.72108 1.49625 1.72106 1.49623 1.72104C1.41986 1.64462 1.37695 1.54099 1.37695 1.43295C1.37695 1.32493 1.41984 1.22132 1.49618 1.1449C1.49621 1.14487 1.49625 1.14483 1.49628 1.1448M6.63028 6.8551L1.49628 1.1448M1.49628 1.1448C1.5727 1.06846 1.6763 1.02557 1.78433 1.02557C1.89237 1.02557 1.996 1.06848 2.07242 1.14485M1.49628 1.1448L2.07242 1.14485M2.07242 1.14485C2.07244 1.14487 2.07246 1.14489 2.07248 1.1449M2.07242 1.14485L2.07248 1.1449M2.07248 1.1449L6.56488 5.63731M2.07248 1.1449L6.56488 5.63731"
+                                                stroke="white" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <span class="nav_icon_container d-lg-none cursor_pointer" id="sidebarToggle"><span
+                                class="nav_icon"></span><span class="nav_icon"></span><span
+                                class="nav_icon"></span></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 d-md-none py-3">
+                <div style="padding-right: 12px; max-width: 100%;"
+                    class="d-flex bg_input_rgb  justify-content-between align-items-center br_44px">
+                    <input type="text"
+                        class=" bg-transparent  topbar_input  border-0 w-100 text-white ff_segoe_ui fw-normal lh_150per font_xs"
+                        placeholder="Search for Assets"><label for="search"><span><svg width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.146 15.3707 4.888 14.112C3.63 12.8533 3.00067 11.316 3 9.5C3 7.68333 3.62933 6.146 4.888 4.888C6.14667 3.63 7.684 3.00067 9.5 3C11.3167 3 12.854 3.62933 14.112 4.888C15.37 6.14667 15.9993 7.684 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8127 13.5623 12.688 12.687C13.5633 11.8117 14.0007 10.7493 14 9.5C14 8.25 13.5623 7.18733 12.687 6.312C11.8117 5.43667 10.7493 4.99933 9.5 5C8.25 5 7.18733 5.43767 6.312 6.313C5.43667 7.18833 4.99933 8.25067 5 9.5C5 10.75 5.43767 11.8127 6.313 12.688C7.18833 13.5633 8.25067 14.0007 9.5 14Z"
+                                    fill="#62C9CC" />
+                            </svg>
+                        </span></label>
+                </div>
+            </div>
+
+        </nav>
+        <div class="row padding_top_row">
+            <div class="col-3 d-none d_laptop_screen_block max_w_242px" style="margin-left: 12px;"></div>
+            <div class="sidebar col-6 col-lg-3  max_w_242px border_rght_sidebar">
+
+                <ul class="nav flex-column justify-content-between h-100">
+
+                    <ul class="ps-0 h_sidebar_ul">
+                        <a href="index.html" class="d-inline-block py-3 d-lg-none"><img
+                                src="/assets/images/svg/page-logo.svg" alt="logo" class="w-100  w_logo "></a>
+                        <li class="nav-item d-flex align-items-center  " onclick="toggleSidebar()">
+                            <a href="timeline.html" onclick="toggleButtons(0)"
+                                class="d-inline-block w-100 br_4px bg_sea_green  h oversidebar_btns  ps_sidebar_btns py-2 my-1 nav-link toggle_sidebar_btns_bg active_sidebar_btns">
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.7">
+                                            <path
+                                                d="M15.2501 13C16.2171 13 17.0001 13.784 17.0001 14.75V19.254C17.0001 19.7181 16.8157 20.1633 16.4875 20.4914C16.1593 20.8196 15.7142 21.004 15.2501 21.004H3.75009C3.28596 21.004 2.84085 20.8196 2.51266 20.4914C2.18447 20.1633 2.00009 19.7181 2.00009 19.254V14.75C2.00009 13.784 2.78409 13 3.75009 13H15.2501ZM21.0011 14.896V20.25C21.003 20.4414 20.9317 20.6263 20.8018 20.7668C20.6719 20.9073 20.4932 20.9929 20.3022 21.0059C20.1113 21.0189 19.9226 20.9585 19.7748 20.8369C19.6269 20.7154 19.5312 20.5419 19.5071 20.352L19.5001 20.25V14.907C19.9933 15.0305 20.5098 15.0267 21.0011 14.896ZM20.2511 10.092C20.7571 10.092 21.2424 10.293 21.6003 10.6508C21.9581 11.0087 22.1591 11.494 22.1591 12C22.1591 12.506 21.9581 12.9914 21.6003 13.3492C21.2424 13.707 20.7571 13.908 20.2511 13.908C19.7451 13.908 19.2598 13.707 18.9019 13.3492C18.5441 12.9914 18.3431 12.506 18.3431 12C18.3431 11.494 18.5441 11.0087 18.9019 10.6508C19.2598 10.293 19.7451 10.092 20.2511 10.092ZM15.2461 2.99701C16.2131 2.99701 16.9961 3.78101 16.9961 4.74701V9.25001C16.9961 9.71414 16.8117 10.1593 16.4835 10.4874C16.1553 10.8156 15.7102 11 15.2461 11H3.74609C3.28196 11 2.83685 10.8156 2.50866 10.4874C2.18047 10.1593 1.99609 9.71414 1.99609 9.25001V4.74701C1.99613 4.30766 2.16142 3.8844 2.45914 3.5613C2.75686 3.2382 3.16521 3.03891 3.60309 3.00301L3.74609 2.99701H15.2461ZM20.2511 3.00001C20.4325 3.00005 20.6077 3.06583 20.7443 3.18515C20.8809 3.30448 20.9697 3.46927 20.9941 3.64901L21.0011 3.75001V9.09601C20.51 8.96588 19.9939 8.96244 19.5011 9.08601V3.75001C19.5011 3.5511 19.5801 3.36033 19.7208 3.21968C19.8614 3.07903 20.0522 3.00001 20.2511 3.00001Z"
+                                                fill="white" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <p
+                                    class="nav-link d-inline-block mb-0 active sidebar_button p-0 ps_sideabr_links border-0 bg-transparent fw-normal border-none  text-white font_xs opacity_07 ff_gt_walsheim_pro">
+                                    Timeline</p>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center" onclick="toggleSidebar()">
+                            <a href="graphics.html" onclick="toggleButtons(1)"
+                                class="d-inline-block py-2 w-100 br_4px   ps_sidebar_btns  my-2 b g_sea_green hoversidebar_btns nav-link toggle_sidebar_btns_bg">
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.7">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M13 2.05C15.295 2.2812 17.4396 3.29842 19.0706 4.92944C20.7016 6.56045 21.7188 8.70502 21.95 11H20C19.7348 11 19.4804 11.1054 19.2929 11.2929C19.1054 11.4804 19 11.7348 19 12C19 12.2652 19.1054 12.5196 19.2929 12.7071C19.4804 12.8946 19.7348 13 20 13H21.95C21.449 18.053 17.185 22 12 22C6.815 22 2.551 18.053 2.05 13H4C4.26522 13 4.51957 12.8946 4.70711 12.7071C4.89464 12.5196 5 12.2652 5 12C5 11.7348 4.89464 11.4804 4.70711 11.2929C4.51957 11.1054 4.26522 11 4 11H2.05C2.2812 8.70502 3.29842 6.56045 4.92944 4.92944C6.56045 3.29842 8.70502 2.2812 11 2.05V4C11 4.26522 11.1054 4.51957 11.2929 4.70711C11.4804 4.89464 11.7348 5 12 5C12.2652 5 12.5196 4.89464 12.7071 4.70711C12.8946 4.51957 13 4.26522 13 4V2.05ZM17.78 6.22L12.937 8.685L12.564 8.882L11.954 9.192C11.234 9.562 10.5 9.964 9.949 10.515C8.978 11.487 8.86 13.103 9.879 14.121C10.897 15.14 12.513 15.022 13.485 14.051C13.957 13.579 14.32 12.973 14.647 12.355L15.118 11.436L15.48 10.738L17.78 6.22ZM13.162 10.838L13.05 11.048L12.937 11.264C12.728 11.666 12.511 12.086 12.239 12.436L12.071 12.636C11.793 12.914 11.446 12.86 11.293 12.707C11.155 12.569 11.097 12.275 11.29 12.015L11.363 11.93C11.682 11.636 12.087 11.404 12.493 11.19L12.736 11.063C12.882 10.988 13.026 10.913 13.162 10.838Z"
+                                                fill="white" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <p
+                                    class="nav-link d-inline-block mb-0 p-0 ps_sideabr_links sidebar_button border-0 bg-transparent fw-normal border-none  text-white font_xs opacity_07 ff_gt_walsheim_pro">
+                                    Graphics</p>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center" onclick="toggleSidebar()">
+                            <a href="portfolio.html" onclick="toggleButtons(2)"
+                                class="d-inline-block py-2 w-100 br_4px   ps_sidebar_btns  my-1 b g_sea_green hoversidebar_btns nav-link toggle_sidebar_btns_bg "><span><svg
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.7">
+                                            <path
+                                                d="M5.95946 7H2.70252C2.32828 7 1.95404 7.32 2.00461 7.84L3.5825 17.83C3.5825 17.83 5.45373 10.47 5.81786 8.7C5.92912 8.17 6.43485 8 6.8091 8H12.0283C12.0283 8 11.3203 5.92 11.2495 5.69C11.1281 5.25 10.9056 5 10.4605 5H7.11254C6.74841 5 6.40451 5.23 6.30336 5.64C6.21233 6.04 5.95946 7 5.95946 7ZM10.8954 7H6.84956C6.84956 7 7.27438 6 7.72954 6H9.88397C10.3695 6 10.8954 7 10.8954 7ZM4.61421 18.25C4.30065 18.72 3.84549 19 3.33975 19H19.2502C19.7964 19 20.1807 18.69 20.292 18.17C20.7371 15.98 21.9913 9.73 21.9913 9.73C22.0621 9.23 21.6878 9 21.3642 9H18.0971V7.53C18.0971 7.37 17.8341 7 17.4295 7H13.6264C13.1005 7 12.7464 7.58 12.7464 7.58L12.0283 9H7.5677C7.24403 9 6.93048 9.19 6.86979 9.5C6.86979 9.5 5.26155 16.2 5.13006 16.83C5.05925 17.2 4.90753 17.82 4.61421 18.25ZM17.47 9H13.0398C13.0398 9 13.6264 8 14.1827 8H16.499C17.2171 8 17.47 9 17.47 9Z"
+                                                fill="white" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <p
+                                    class="nav-link d-inline-block mb-0 p-0 ps_sideabr_links sidebar_button border-0 bg-transparent fw-normal border-none  text-white font_xs opacity_07 ff_gt_walsheim_pro">
+                                    Portfolio</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-column-reverse">
+                        <li class="nav-item d-flex align-items-center  ">
+                            <a href="#timeline" onclick="toggleSidebar()"
+                                class="d-inline-block w-100 br_4px   ps_sidebar_btns py-2 my-1 help_sidebar_btn_hover text ">
+                                <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.7">
+                                            <path
+                                                d="M17 7L15.59 8.41L18.17 11H8V13H18.17L15.59 15.58L17 17L22 12L17 7ZM4 5H12V3H4C2.9 3 2 3.9 2 5V19C2 20.1 2.9 21 4 21H12V19H4V5Z"
+                                                fill="white" />
+                                        </g>
+                                    </svg>
+
+
+                                </span>
+                                <p
+                                    class="nav-link d-inline-block mb-0 active sidebar_button p-0 ps_sideabr_links border-0 bg-transparent fw-normal border-none  text-white font_xs opacity_07 ff_gt_walsheim_pro">
+                                    Logout</p>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center  ">
+                            <a href="#timeline" onclick="toggleSidebar()"
+                                class="d-inline-block w-100 br_4px   ps_sidebar_btns py-2 my-1 help_sidebar_btn_hover text">
+                                <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.7">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 19H11V17H13V19ZM15.07 11.25L14.17 12.17C13.45 12.9 13 13.5 13 15H11V14.5C11 13.4 11.45 12.4 12.17 11.67L13.41 10.41C13.78 10.05 14 9.55 14 9C14 7.9 13.1 7 12 7C10.9 7 10 7.9 10 9H8C8 6.79 9.79 5 12 5C14.21 5 16 6.79 16 9C16 9.88 15.64 10.68 15.07 11.25Z"
+                                                fill="white" />
+                                        </g>
+                                    </svg>
+
+                                </span>
+                                <p
+                                    class="nav-link d-inline-block mb-0 active sidebar_button p-0 ps_sideabr_links border-0 bg-transparent fw-normal border-none  text-white font_xs opacity_07 ff_gt_walsheim_pro">
+                                    Help</p>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+
+            </div>
+            <div
+                class=" position-relative lg_w_50_per col-12 col-lg-10 sidebar_content_width ps-0 d-flex flex-column content_custom_height">
+                <div class="content col-12  sidebar_content_width pb-5">
+                    <div class="tab-content pb-5 pb-md-0 mb-4 mb-md-0">
+                        <div class="tab-pane fade show active" id="timeline">
+                            <section class="px_20_cus tom">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-sm-flex align-items-center">
+                                                <h2 class="ff_gt_walsheim_pro fw-medium font_xl text-white mb-0 me-1">
+                                                    Ferrominera Orinoco
+                                                </h2>
+                                                <span style="background: rgba(98, 201, 204, 0.13)"
+                                                    class="py-1 px-3 ff_segoe_ui fw-normal font_xs mb-0 color_sea_green rounded-5 ms-sm-2">Iron
+                                                    producer</span>
+                                            </div>
+                                            <a href="/index.html">
+                                                <button
+                                                    class="back_btn ff_gt_walsheim_pro fw-medium font_md mb-0 color_sea_green rounded-3 transition_03">
+                                                    Back
+                                                </button>
+                                            </a>
+                                        </div>
+                                        <div class="row mt-3 mb-md-5 mb-lg-0">
+                                            <div class="col-xl-8">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-6">
+                                                        <div
+                                                            class="h-100 working_box rounded-4 d-flex flex-column justify-content-center transition_03 portfolio_amount_box_height">
+                                                            <h2
+                                                                class="ff_gt_walsheim_pro fw-medium font_xl color_sea_green mb-0">
+                                                                Working Capital
+                                                                Loan
+                                                            </h2>
+                                                            <p
+                                                                class="ff_segoe_ui fw-normal font_xs text-white opacity_06 mb-0">
+                                                                Type of instrument
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6 mt-4 mt-sm-0">
+                                                        <div
+                                                            class="h-100 working_box rounded-4 d-flex flex-column justify-content-center transition_03 portfolio_amount_box_height">
+                                                            <h2
+                                                                class="ff_gt_walsheim_pro fw-medium font_xl color_sea_green mb-0">
+                                                                16.00%
+                                                            </h2>
+                                                            <p
+                                                                class="ff_segoe_ui fw-normal font_xs text-white opacity_06 mb-0">
+                                                                Interest rate
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-6 mt-4 mt-md-0">
+                                                        <div
+                                                            class="h-100 working_box rounded-4 d-flex flex-column justify-content-center transition_03 portfolio_amount_box_height">
+                                                            <h2
+                                                                class="ff_gt_walsheim_pro fw-medium font_xl color_sea_green mb-0">
+                                                                $ 5,565,099.00
+                                                            </h2>
+                                                            <p
+                                                                class="ff_segoe_ui fw-normal font_xs text-white opacity_06 mb-0">
+                                                                Total amount
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline_box_bg_color rounded-4 mt-4">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <h3
+                                                            class="ff_gt_walsheim_pro fw-medium font_lg text-white mb-0">
+                                                            Timeline
+                                                        </h3>
+                                                        <p
+                                                            class="ff_gt_walsheim_pro fw-normal font_md color_sea_green mb-0">
+                                                            How does it works?
+                                                        </p>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center mt-3 pt-1">
+                                                        <p
+                                                            class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0">
+                                                            01/08/2023
+                                                        </p>
+                                                        <p
+                                                            class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0">
+                                                            30/08/2023
+                                                        </p>
+                                                    </div>
+                                                    <div class="progress mt-2">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center mt-2 pt-1">
+                                                        <p class="ff_gt_walsheim_pro fw-normal font_md text-white mb-0">
+                                                            $10.00
+                                                        </p>
+                                                        <p class="ff_gt_walsheim_pro fw-normal font_md text-white mb-0">
+                                                            $5,565,500
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-center mt-1">
+                                                        <p
+                                                            class="ff_gt_walsheim_pro fw-normal font_xs text-white opacity_07 mb-0">
+                                                            Initial public offering
+                                                        </p>
+                                                        <p
+                                                            class="ff_gt_walsheim_pro fw-normal font_xs text-white opacity_07 mb-0">
+                                                            Credit performance (DDC)
+                                                        </p>
+                                                    </div>
+                                                    <div
+                                                        class="d-sm-flex flex-wrap justify-content-between mt-5 gap-md-4 gap-xxl-0">
+                                                        <div>
+                                                            <div class="d-flex align-items-center">
+                                                                <img class="timeline_icon_height_width_custome"
+                                                                    src="./assets/images/webp/capital-icon.webp"
+                                                                    alt="timeline-capital-icon" />
+                                                                <div class="ms-2 ps-1">
+                                                                    <p
+                                                                        class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                                        Working Capital Loan
+                                                                    </p>
+                                                                    <p
+                                                                        class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0 mt_4_negative">
+                                                                        Type of instrument
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center mt-4 pt-1">
+                                                                <img class="timeline_icon_height_width_custome"
+                                                                    src="./assets/images/webp/timeline-dollar-icon.webp"
+                                                                    alt="timeline-dollar-icon" />
+                                                                <div class="ms-2 ps-1">
+                                                                    <p
+                                                                        class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                                        $ 5565099.00
+                                                                    </p>
+                                                                    <p
+                                                                        class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0 mt_4_negative">
+                                                                        Total amount
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="d-flex align-items-center mt-4 mt-sm-0">
+                                                                <img class="timeline_icon_height_width_custome"
+                                                                    src="./assets/images/webp/timeline-exchange-icon.webp"
+                                                                    alt="timeline-exchange-icon" />
+                                                                <div class="ms-2 ps-1">
+                                                                    <p
+                                                                        class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                                        Pantera Exchange
+                                                                    </p>
+                                                                    <p
+                                                                        class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0 mt_4_negative">
+                                                                        Transmitter
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center mt-4 pt-1">
+                                                                <img class="timeline_icon_height_width_custome"
+                                                                    src="./assets/images/webp/timeline-calender-icon.webp"
+                                                                    alt="timeline-calender-icon" />
+                                                                <div class="ms-2 ps-1">
+                                                                    <p
+                                                                        class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                                        2 months
+                                                                    </p>
+                                                                    <p
+                                                                        class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0 mt_4_negative">
+                                                                        Estimated repayment date
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="me-4 mt-4 mt-md-0">
+                                                            <div class="d-flex align-items-center">
+                                                                <img class="timeline_icon_height_width_custome"
+                                                                    src="./assets/images/webp/timeline-bank-icon.webp"
+                                                                    alt="timeline-bank-icon" />
+                                                                <div class="ms-2 ps-1">
+                                                                    <p
+                                                                        class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                                        Compass Bank
+                                                                    </p>
+                                                                    <p
+                                                                        class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0 mt_4_negative">
+                                                                        Settlor entity
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline_box_bg_color rounded-4 mt-4">
+                                                    <h3 class="ff_gt_walsheim_pro fw-medium font_lg text-white mb-0">
+                                                        About company
+                                                    </h3>
+                                                    <h4
+                                                        class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0 mt-3">
+                                                        Dictum sit lobortis hendrerit morbi leo amet sapien ipsum
+                                                        blandit.
+                                                    </h4>
+                                                    <p
+                                                        class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0 mt-1">
+                                                        Arcu fringilla tincidunt mauris ut risus massa ipsum. Metus
+                                                        adipiscing sed leo pharetra sed. Ut nulla libero vel ipsum
+                                                        adipiscing purus posuere. Dui pulvinar id enim tristique
+                                                        habitasse lobortis. Aliquam et et orci ultrices interdum
+                                                        rhoncus arcu mi quis. Arcu fringilla tincidunt mauris ut risus
+                                                        massa ipsum. Metus adipiscing sed leo pharetra sed. Ut nulla
+                                                        libero vel ipsum adipiscing purus posuere. Dui pulvinar id
+                                                        enim tristique habitasse lobortis. Aliquam et et orci ultrices
+                                                        interdum rhoncus arcu mi quis.
+                                                    </p>
+                                                    <div class="d-sm-flex mt-3">
+                                                        <div class="d-flex align-items-center me-sm-5">
+                                                            <img class="timeline_icon_height_width_custome"
+                                                                src="./assets/images/webp/sales-icon.webp"
+                                                                alt="timeline-sales-icon" />
+                                                            <div class="ms-2 ps-1">
+                                                                <p
+                                                                    class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                                    Sales report
+                                                                </p>
+                                                                <p
+                                                                    class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0 mt_4_negative">
+                                                                    2022-2023
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="d-flex align-items-center ps-sm-5 ms-sm-5 mt-4 mt-sm-0">
+                                                            <img class="timeline_icon_height_width_custome"
+                                                                src="./assets/images/webp/pdf-icon.webp"
+                                                                alt="timeline-sales-icon" />
+                                                            <div class="ms-2 ps-1">
+                                                                <p
+                                                                    class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                                    Orinoco Ferrominera wag...
+                                                                </p>
+                                                                <p
+                                                                    class="ff_segoe_ui fw-normal font_xs text-white opacity_05 mb-0 mt_4_negative">
+                                                                    2022-2023
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div
+                                                    class="timeline_amount_bg_color rounded-4 position-relative mt-4 mt-xl-0">
+                                                    <span
+                                                        class="timelineAmount_shadow position-absolute z-1 translate-middle top-50 start-50"></span>
+                                                    <div class="d-flex align-items-center pb-1">
+                                                        <img class="timeline_icon_height_width_custome"
+                                                            src="./assets/images/webp/timeline-invest-icon.webp"
+                                                            alt="timeline-invest-icon" />
+                                                        <div class="ms-2 ps-1">
+                                                            <p
+                                                                class="ff_gt_walsheim_pro fw-normal font_md text-white mb-0">
+                                                                Enter Amount to Invest
+                                                            </p>
+                                                            <p
+                                                                class="ff_segoe_ui fw-normal font_md text-white opacity_05 mb-0 mt_4_negative">
+                                                                Invest
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        class="d-flex align-items-center justify-content-between usd_bg_color pe-3 mt-3">
+                                                        <input min="0" max="0"
+                                                            class="w-100 px-4 bg-transparent border_none outline_none ff_segoe_ui fw-normal font_xs text-white opacity_07 usd_placeholder py_12_custome"
+                                                            type="number" placeholder="USD" />
+                                                        <img src="./assets/images/svg/usd-dollar-icon.svg"
+                                                            alt="usd-dollar-icon" />
+                                                    </span>
+                                                    <div
+                                                        class="d-xl-block d-xxl-flex d-flex justify-content-between align-items-center mt-3 pt-1 timeline_after_bottom_line position-relative">
+                                                        <p class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                            Net Income
+                                                        </p>
+                                                        <p class="ff_gt_walsheim_pro fw-bold font_xs text-white mb-0">
+                                                            $00.00
+                                                        </p>
+                                                    </div>
+                                                    <div
+                                                        class="d-xl-block d-xxl-flex d-flex justify-content-between align-items-center mt-3 pt-1 timeline_after_bottom_line position-relative">
+                                                        <p class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                            Maximum investment per user
+                                                        </p>
+                                                        <p class="ff_gt_walsheim_pro fw-bold font_xs text-white mb-0">
+                                                            $ 5565099.00
+                                                        </p>
+                                                    </div>
+                                                    <div
+                                                        class="d-xl-block d-xxl-flex d-flex justify-content-between align-items-center mt-3 pt-1 timeline_after_bottom_line position-relative mb-3">
+                                                        <p class="ff_gt_walsheim_pro fw-normal font_xs text-white mb-0">
+                                                            Your investment in the product
+                                                        </p>
+                                                        <p class="ff_gt_walsheim_pro fw-bold font_xs text-white mb-0">
+                                                            $00.00
+                                                        </p>
+                                                    </div>
+                                                    <button
+                                                        class="common_btn ff_gt_walsheim_pro fw-medium font_md text-white mt-4 text-center w-100">
+                                                        Invest now
+                                                    </button>
+                                                </div>
+                                                <div class="timeline_box_bg_color rounded-4 transition_03 mt-4">
+                                                    <h2 class="ff_gt_walsheim_pro fw-medium font_lg text-white mb-0">
+                                                        Company Gallery
+                                                    </h2>
+                                                    <div class="row">
+                                                        <div class="mt-3">
+                                                            <div class="col-12">
+                                                                <div class="slide_height">
+                                                                    <img class="w-100 rounded-2 gallery_slider_main_img"
+                                                                        src="../assets/images/webp/company-gallary-imain-img.webp"
+                                                                        alt="slider_main_img">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-between mt-2 pt-1 px-2">
+                                                                <div class="col-3 px-1">
+                                                                    <span
+                                                                        class="d-inline-block overflow-hidden rounded-3 borderimageuppersideAcrive small-image-container"
+                                                                        onclick="handleDotClick(0)">
+                                                                        <img class="w-100 cursor_pointer"
+                                                                            src="../assets/images/webp/company-gallary-imain-img.webp"
+                                                                            alt="slider_img" style="width: 100%;">
+                                                                        <!-- Set the desired height -->
+                                                                    </span>
+                                                                </div>
+                                                                <div class="col-3 px-1">
+                                                                    <span
+                                                                        class="d-inline-block overflow-hidden rounded-3 small-image-container"
+                                                                        onclick="handleDotClick(1)">
+                                                                        <img class="w-100 cursor_pointer"
+                                                                            src="../assets/images/webp/gallary-second-img.webp"
+                                                                            alt="slider_img" style="width: 100%;">
+                                                                        <!-- Set the desired height -->
+                                                                    </span>
+                                                                </div>
+                                                                <div class="col-3 px-1">
+                                                                    <span
+                                                                        class="d-inline-block overflow-hidden rounded-3 small-image-container"
+                                                                        onclick="handleDotClick(2)">
+                                                                        <img class="w-100 cursor_pointer"
+                                                                            src="../assets/images/webp/gallary-third-img.webp"
+                                                                            alt="slider_img" style="width: 100%;">
+                                                                        <!-- Set the desired height -->
+                                                                    </span>
+                                                                </div>
+                                                                <div class="col-3 px-1">
+                                                                    <span
+                                                                        class="d-inline-block overflow-hidden rounded-3 small-image-container"
+                                                                        onclick="handleDotClick(3)">
+                                                                        <img class="w-100 cursor_pointer"
+                                                                            src="../assets/images/webp/gallary-fourth-img.webp"
+                                                                            alt="slider_img" style="width: 100%;">
+                                                                        <!-- Set the desired height -->
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-center gap-1 w-100 mt-3">
+                                                                <span
+                                                                    class="d-inline-block dotz cursor_pointer dotzActive"
+                                                                    onclick="handleDotClick(0)"></span>
+                                                                <span class="d-inline-block dotz cursor_pointer"
+                                                                    onclick="handleDotClick(1)"></span>
+                                                                <span class="d-inline-block dotz cursor_pointer"
+                                                                    onclick="handleDotClick(2)"></span>
+                                                                <span class="d-inline-block dotz cursor_pointer"
+                                                                    onclick="handleDotClick(3)"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer footer_clr">
+                    <div class="row align-items-center justify-content-center flex-column-reverse flex-md-row py-3">
+                        <div class="col-5 col-md-6 col-12 pt-3 pt-md-0">
+                            <p
+                                class="mb-0 text-center text-md-start ps-0 ps-md-4 opacity_07 ff_segoe_ui text-white font_xs fw-normal line_h_150per">
+                                ©
+                                Copyright
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>
+                                Pantera | All
+                                rights
+                                reserved.
+                            </p>
+                        </div>
+                        <div class="col-5 col-md-6 col-12 ">
+                            <div class="d-flex justify-content-center justify-content-md-end me_footer_links">
+                                <div><a href="https://www.facebook.com" class="d-inline-block footer_icons_width"
+                                        target="_blank"><svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                            class="footer_icon transition_02 cursor_pointer"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle class=" transition_02" cx="22.0508" cy="22.9834" r="21.5"
+                                                stroke="#62C9CC" />
+                                            <path class=" transition_02"
+                                                d="M24.0508 24.4834H26.5508L27.5508 20.4834H24.0508V18.4834C24.0508 17.4534 24.0508 16.4834 26.0508 16.4834H27.5508V13.1234C27.2248 13.0804 25.9938 12.9834 24.6938 12.9834C21.9788 12.9834 20.0508 14.6404 20.0508 17.6834V20.4834H17.0508V24.4834H20.0508V32.9834H24.0508V24.4834Z"
+                                                fill="#62C9CC" />
+                                        </svg></a>
+                                </div>
+                                <div class="ms-3"><a href="https://www.instagram.com"
+                                        class="d-inline-block footer_icons_width" target="_blank"><svg
+                                            class="footer_icon transition_02 cursor_pointer" width="45" height="45"
+                                            viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle class=" transition_02" cx="22.0508" cy="22.9834" r="21.5"
+                                                stroke="#62C9CC" />
+                                            <path class=" transition_02"
+                                                d="M23.0784 12.9846C23.8081 12.9818 24.5379 12.9892 25.2674 13.0066L25.4614 13.0136C25.6854 13.0216 25.9064 13.0316 26.1734 13.0436C27.2374 13.0936 27.9634 13.2616 28.6004 13.5086C29.2604 13.7626 29.8164 14.1066 30.3724 14.6626C30.8808 15.1622 31.2742 15.7666 31.5254 16.4336C31.7724 17.0706 31.9404 17.7976 31.9904 18.8616C32.0024 19.1276 32.0124 19.3496 32.0204 19.5736L32.0264 19.7676C32.0441 20.4968 32.0518 21.2262 32.0494 21.9556L32.0504 22.7016V24.0116C32.0528 24.7414 32.0452 25.4711 32.0274 26.2006L32.0214 26.3946C32.0134 26.6186 32.0034 26.8396 31.9914 27.1066C31.9414 28.1706 31.7714 28.8966 31.5254 29.5336C31.275 30.2014 30.8815 30.8062 30.3724 31.3056C29.8723 31.8139 29.2677 32.2074 28.6004 32.4586C27.9634 32.7056 27.2374 32.8736 26.1734 32.9236C25.9064 32.9356 25.6854 32.9456 25.4614 32.9536L25.2674 32.9596C24.5379 32.9774 23.8081 32.9851 23.0784 32.9826L22.3324 32.9836H21.0234C20.2936 32.9861 19.5639 32.9784 18.8344 32.9606L18.6404 32.9546C18.403 32.946 18.1657 32.936 17.9284 32.9246C16.8644 32.8746 16.1384 32.7046 15.5004 32.4586C14.8331 32.208 14.2286 31.8145 13.7294 31.3056C13.2204 30.8059 12.8266 30.2012 12.5754 29.5336C12.3284 28.8966 12.1604 28.1706 12.1104 27.1066C12.0992 26.8693 12.0892 26.632 12.0804 26.3946L12.0754 26.2006C12.0569 25.4711 12.0486 24.7414 12.0504 24.0116V21.9556C12.0476 21.2262 12.0549 20.4968 12.0724 19.7676L12.0794 19.5736C12.0874 19.3496 12.0974 19.1276 12.1094 18.8616C12.1594 17.7966 12.3274 17.0716 12.5744 16.4336C12.8258 15.7662 13.2203 15.1621 13.7304 14.6636C14.2293 14.1544 14.8333 13.7602 15.5004 13.5086C16.1384 13.2616 16.8634 13.0936 17.9284 13.0436L18.6404 13.0136L18.8344 13.0086C19.5636 12.9902 20.293 12.9819 21.0224 12.9836L23.0784 12.9846ZM22.0504 17.9846C21.3879 17.9753 20.7301 18.0977 20.1154 18.3447C19.5006 18.5917 18.941 18.9585 18.4692 19.4237C17.9974 19.8889 17.6228 20.4432 17.3671 21.0544C17.1114 21.6656 16.9797 22.3216 16.9797 22.9841C16.9797 23.6467 17.1114 24.3026 17.3671 24.9139C17.6228 25.5251 17.9974 26.0794 18.4692 26.5446C18.941 27.0098 19.5006 27.3765 20.1154 27.6236C20.7301 27.8706 21.3879 27.993 22.0504 27.9836C23.3765 27.9836 24.6482 27.4568 25.5859 26.5192C26.5236 25.5815 27.0504 24.3097 27.0504 22.9836C27.0504 21.6575 26.5236 20.3858 25.5859 19.4481C24.6482 18.5104 23.3765 17.9846 22.0504 17.9846ZM22.0504 19.9846C22.4489 19.9773 22.8449 20.0494 23.2152 20.1968C23.5855 20.3442 23.9227 20.564 24.2072 20.8432C24.4916 21.1224 24.7176 21.4555 24.8718 21.823C25.0261 22.1905 25.1056 22.585 25.1056 22.9836C25.1057 23.3822 25.0264 23.7768 24.8722 24.1443C24.7181 24.5119 24.4922 24.8451 24.2079 25.1244C23.9235 25.4037 23.5864 25.6235 23.2161 25.771C22.8458 25.9186 22.4499 25.9908 22.0514 25.9836C21.2557 25.9836 20.4927 25.6676 19.9301 25.1049C19.3675 24.5423 19.0514 23.7793 19.0514 22.9836C19.0514 22.188 19.3675 21.4249 19.9301 20.8623C20.4927 20.2997 21.2557 19.9836 22.0514 19.9836L22.0504 19.9846ZM27.3004 16.4846C26.9778 16.4975 26.6727 16.6348 26.449 16.8676C26.2253 17.1004 26.1004 17.4108 26.1004 17.7336C26.1004 18.0565 26.2253 18.3668 26.449 18.5997C26.6727 18.8325 26.9778 18.9697 27.3004 18.9826C27.6319 18.9826 27.9498 18.8509 28.1843 18.6165C28.4187 18.3821 28.5504 18.0641 28.5504 17.7326C28.5504 17.4011 28.4187 17.0832 28.1843 16.8487C27.9498 16.6143 27.6319 16.4826 27.3004 16.4826V16.4846Z"
+                                                fill="#62C9CC" />
+                                        </svg></a>
+
+                                </div>
+                                <div class="ms-3"><a href="https://twitter.com"
+                                        class="d-inline-block footer_icons_width" target="_blank"><svg width="45"
+                                            height="45" class="footer_icon transition_02 cursor_pointer"
+                                            viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle class=" transition_02" cx="22.0508" cy="22.9834" r="21.5"
+                                                stroke="#62C9CC" />
+                                            <path class=" transition_02"
+                                                d="M32.5108 16.9834C31.7408 17.3334 30.9108 17.5634 30.0508 17.6734C30.9308 17.1434 31.6108 16.3034 31.9308 15.2934C31.1008 15.7934 30.1808 16.1434 29.2108 16.3434C28.4208 15.4834 27.3108 14.9834 26.0508 14.9834C23.7008 14.9834 21.7808 16.9034 21.7808 19.2734C21.7808 19.6134 21.8208 19.9434 21.8908 20.2534C18.3308 20.0734 15.1608 18.3634 13.0508 15.7734C12.6808 16.4034 12.4708 17.1434 12.4708 17.9234C12.4708 19.4134 13.2208 20.7334 14.3808 21.4834C13.6708 21.4834 13.0108 21.2834 12.4308 20.9834V21.0134C12.4308 23.0934 13.9108 24.8334 15.8708 25.2234C15.2415 25.3956 14.5809 25.4196 13.9408 25.2934C14.2124 26.1459 14.7444 26.8918 15.4618 27.4263C16.1793 27.9609 17.0463 28.2571 17.9408 28.2734C16.4245 29.4738 14.5448 30.1227 12.6108 30.1134C12.2708 30.1134 11.9308 30.0934 11.5908 30.0534C13.4908 31.2734 15.7508 31.9834 18.1708 31.9834C26.0508 31.9834 30.3808 25.4434 30.3808 19.7734C30.3808 19.5834 30.3808 19.4034 30.3708 19.2134C31.2108 18.6134 31.9308 17.8534 32.5108 16.9834Z"
+                                                fill="#62C9CC" />
+                                        </svg></a>
+
+
+                                </div>
+                                <div class="ms-3"><a href="https://linkedIn.com"
+                                        class="d-inline-block footer_icons_width" target="_blank"><svg width="45"
+                                            class="footer_icon transition_02 cursor_pointer" height="45"
+                                            viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="transition_02" cx="22.0508" cy="22.9834" r="21.5"
+                                                stroke="#62C9CC" />
+                                            <path class=" transition_02"
+                                                d="M16.9912 15.9834C16.9909 16.5139 16.78 17.0225 16.4047 17.3973C16.0295 17.7722 15.5206 17.9827 14.9902 17.9824C14.4598 17.9822 13.9512 17.7712 13.5763 17.3959C13.2014 17.0207 12.9909 16.5119 12.9912 15.9814C12.9915 15.451 13.2024 14.9424 13.5777 14.5675C13.953 14.1926 14.4618 13.9822 14.9922 13.9824C15.5226 13.9827 16.0312 14.1937 16.4061 14.5689C16.781 14.9442 16.9915 15.453 16.9912 15.9834ZM17.0512 19.4634H13.0512V31.9834H17.0512V19.4634ZM23.3712 19.4634H19.3912V31.9834H23.3312V25.4134C23.3312 21.7534 28.1012 21.4134 28.1012 25.4134V31.9834H32.0512V24.0534C32.0512 17.8834 24.9912 18.1134 23.3312 21.1434L23.3712 19.4634Z"
+                                                fill="#62C9CC" />
+                                        </svg></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay" onclick="toggleSidebar()"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
+    <!-- COMPANY GALLERY SLIDER SCRIPT -->
+    <script>
+        let active = 0;
+        const imges = [
+            "../assets/images/webp/company-gallary-imain-img.webp",
+            "../assets/images/webp/gallary-second-img.webp",
+            "../assets/images/webp/gallary-third-img.webp",
+            "../assets/images/webp/gallary-fourth-img.webp",
+        ];
+        const slideInterval = 2000; // Change slide every 4 seconds
+
+        function handleDotClick(index) {
+            active = index;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            const mainImage = document.querySelector(".slide_height img");
+            const dotzElements = document.querySelectorAll(".dotz");
+            const smallImageContainers = document.querySelectorAll(".overflow-hidden");
+
+            mainImage.src = imges[active];
+
+            dotzElements.forEach((dot, index) => {
+                dot.classList.toggle("dotzActive", active === index);
+            });
+
+            smallImageContainers.forEach((container, index) => {
+                container.classList.toggle("borderimageuppersideAcrive", active === index);
+            });
+        }
+
+        function startAutoplay() {
+            setInterval(() => {
+                active = (active + 1) % imges.length;
+                updateSlide();
+            }, slideInterval);
+        }
+
+        // Start autoplay when the page loads
+        startAutoplay();
+    </script>
+    <!-- <script>
+        let activeSlide = 0;
+        const slideInterval = 2000;
+        const imges = [
+            "../assets/images/webp/company-gallary-imain-img.webp",
+            "../assets/images/webp/gallary-second-img.webp",
+            "../assets/images/webp/gallary-third-img.webp",
+            "../assets/images/webp/gallary-fourth-img.webp",
+        ];
+
+        function changeSlide(index) {
+            activeSlide = index;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            const dotzElements = document.querySelectorAll(".dotz");
+            const imageContainers = document.querySelectorAll(
+                ".d-inline-block.overflow-hidden.rounded-3"
+            );
+            const mainImage = document.querySelector(".slide_height img");
+
+            dotzElements.forEach((dot, index) => {
+                dot.classList.toggle("dotzActive", activeSlide === index);
+            });
+
+            imageContainers.forEach((container, index) => {
+                container.classList.toggle(
+                    "borderimageuppersideAcrive",
+                    activeSlide === index
+                );
+            });
+
+            mainImage.src = imges[activeSlide];
+        }
+
+        function startAutoplay() {
+            setInterval(() => {
+                activeSlide = (activeSlide + 1) % imges.length;
+                updateSlide();
+            }, slideInterval);
+        }
+        startAutoplay();
+    </script> -->
+
+    <script>
+        // function toggleSidebar() {
+        //     document.querySelector(".sidebar").classList.toggle("active");
+        // }
+
+        // document.getElementById("sidebarToggle").addEventListener("click", function () {
+        //     document.querySelector(".sidebar").classList.toggle("active");
+        // });
+
+        function toggleSidebar() {
+            var sidebar = document.querySelector(".sidebar");
+            sidebar.classList.toggle("active");
+            var overlay = document.querySelector(".overlay");
+            overlay.classList.toggle("active");
+            if (sidebar.classList.contains("active")) {
+                document.body.style.overflow = "hidden"; // Hide overflow when sidebar is active
+            } else {
+                document.body.style.overflow = "auto"; // Restore overflow when sidebar is inactive
+            }
+        }
+
+        document.getElementById("sidebarToggle").addEventListener("click", toggleSidebar);
+        function toggleButtons(index) {
+            const buttons = document.querySelectorAll(".toggle_sidebar_btns_bg");
+            for (let i = 0; i < buttons.length; i++) {
+                if (i === index) {
+                    buttons[i].classList.add("active_sidebar_btns");
+                } else {
+                    buttons[i].classList.remove("active_sidebar_btns");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

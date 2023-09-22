@@ -1,0 +1,166 @@
+/* =============== form glow ============ */
+.login_left_form_glow {
+    left: 0;
+    top: 12%;
+}
+
+.form_glow {
+    background: var(--color-sea-green);
+    -webkit-filter: blur(119.78864288330078px);
+    filter: blur(119.78864288330078px);
+    height: 154.437px;
+    width: 154.437px;
+}
+
+.login_right_form_glow {
+    bottom: 170px;
+    right: 0;
+}
+
+.p_login_form {
+    padding: 27px 12px;
+}
+
+.lh_normal {
+    line-height: normal;
+}
+
+.sign_hover:hover {
+    color: #fff !important;
+}
+
+.cursur_pointer {
+    cursor: pointer;
+}
+
+.border_radius_5 {
+    border-radius: 5px;
+}
+
+.sign_up_btn {
+    padding: 12px 0;
+}
+
+/* ================== input modify ============================ */
+.login_input_modify {
+    background: linear-gradient(117.22deg, rgba(18, 18, 58, .16) -52.48%, rgba(52, 159, 255, .16) 113.7%);
+    border: 1px solid #62c9cc33;
+    border-radius: 5px;
+    opacity: .800000011920929;
+    padding: 12px;
+}
+
+.login_input_modify::placeholder {
+    color: #ffffff !important;
+    opacity: 0.3 !important;
+}
+
+.login_input_modify:focus {
+    outline: 1px solid #62c9cc;
+}
+
+.border_sea_color {
+    border: 1px solid var(--color-sea-green) !important;
+}
+
+/* ================== CHECK-BOX MODIFY ======================== */
+.checkbox_modify input {
+    cursor: pointer;
+    display: none;
+    height: auto;
+    margin-bottom: 0;
+    padding: 0;
+    width: auto;
+}
+
+.checkbox_modify label,
+.checkbox_modify label:before {
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox_modify label:before {
+    --webkit-appearance: none;
+    background-color: initial !important;
+    border: 1.06px solid #fff !important;
+    border-radius: 2px;
+    content: "";
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: -2px;
+    padding: 7px;
+    vertical-align: middle;
+}
+
+.checkbox_modify input:checked+label:after {
+    border: solid #62c9cc;
+    border-width: 0 2px 2px 0;
+    content: "";
+    display: block;
+    height: 11px;
+    left: 5px;
+    opacity: 1 !important;
+    position: absolute;
+    top: 4px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 6px;
+}
+
+.btn_hover:focus,
+.btn_hover:hover {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+    background-color: initial !important;
+    box-shadow: 0 0 0 0.7em transparent;
+    color: var(--color-sea-green) !important;
+}
+
+/* =================== FORM BUTTON BG-COLOR ======================= */
+.bg_sea_green {
+    background-color: var(--color-sea-green);
+}
+
+.social_icon_btn {
+    background: #17295A;
+    border: 1px solid transparent;
+    padding: 12px;
+}
+
+.social_icon_btn:hover {
+    border: 1px solid #62c9cc !important;
+}
+
+.bg_linear_darkblue {
+    background: linear-gradient(117.22deg, rgba(18, 18, 58, .12) -52.48%, rgba(52, 159, 255, .12) 113.7%);
+}
+
+/* ========================POP UP BUTTON ========================================= */
+div:where(.swal2-container) button:where(.swal2-styled) {
+    padding: 0.625em 2.1em !important;
+}
+
+/* =====================================  MEDIA QUERIES   ======================================= */
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+    .custom_container {
+        max-width: 1152px !important;
+    }
+}
+
+@media (min-width:1399.98px) {
+    .checkbox_modify input:checked+label:after {
+        top: 6px;
+    }
+}
+
+@media (min-width: 575.98px) {
+    .p_login_form {
+        padding: 27px;
+    }
+}
+
+@media (max-width:576px) {
+    .social_icon {
+        width: 17px;
+    }
+}
