@@ -1150,7 +1150,7 @@ textarea {
 }
 
 .landing_hero_bg {
-  background-image: url("../images/webp/hero-section-img.webp");
+  /* background-image: url("../images/webp/hero-section-img.webp"); */
   /* background-size: cover; */
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1698,4 +1698,10 @@ textarea:focus-visible {
 }
 .footer_clr {
   background-color: #050519;
+}
+
+.rect_blue {
+  bottom: 0;
+  width: 100%;
+  filter: brightness(0);
 }
