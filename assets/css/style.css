@@ -1705,3 +1705,7 @@ textarea:focus-visible {
   width: 100%;
   filter: brightness(0);
 }
+
+.bg_black {
+  background-color: black;
+}
