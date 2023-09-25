@@ -786,6 +786,10 @@ textarea {
   min-height: 234px;
 }
 
+.min_hieght_investment {
+  min-height: 350px;
+}
+
 /* NEWS PAGE CSS HERE================================ */
 .common_heading_bg {
   background-image: url("/assets/images/webp/common-heading-bg-img.webp");
@@ -954,6 +958,9 @@ textarea {
 
   .common_heading_bg {
     min-height: 270px !important;
+  }
+  .min_hieght_investment {
+    min-height: 250px;
   }
 }
 
